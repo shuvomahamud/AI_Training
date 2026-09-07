@@ -14,7 +14,7 @@ export function AddRecordingForm({ sessionId }: { sessionId: string }) {
     null,
   );
   return (
-    <form action={action} className="grid gap-3 rounded-xl border border-ink-200 bg-white p-4">
+    <form action={action} className="grid gap-3 rounded-xl border border-border bg-surface p-4">
       <input type="hidden" name="sessionId" value={sessionId} />
       <Field label="Label" name="label" required placeholder="Session recording" />
       <Field label="URL" name="url" type="url" required />

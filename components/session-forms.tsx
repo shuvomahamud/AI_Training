@@ -15,7 +15,7 @@ export function CreateSessionForm({ courseId }: { courseId: string }) {
     null,
   );
   return (
-    <form action={action} className="grid gap-3 rounded-xl border border-ink-200 bg-white p-4">
+    <form action={action} className="grid gap-3 rounded-xl border border-border bg-surface p-4">
       <input type="hidden" name="courseId" value={courseId} />
       <Field label="Title" name="title" required />
       <Field

@@ -69,7 +69,7 @@ export default async function AdminEnrollmentsPage({
           rows.map((row) => (
             <li
               key={row.id}
-              className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-ink-200 bg-white p-4"
+              className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-border bg-surface p-4"
             >
               <div>
                 <p className="font-medium">

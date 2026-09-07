@@ -26,7 +26,7 @@ export default async function AdminCoursesPage() {
         {list.map((course) => (
           <li
             key={course.id}
-            className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-ink-200 bg-white p-4"
+            className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-border bg-surface p-4"
           >
             <div>
               <Link className="font-medium hover:underline" href={`/admin/courses/${course.id}`}>

@@ -46,7 +46,7 @@ export function DocumentUpload({ sessionId }: { sessionId: string }) {
   }
 
   return (
-    <div className="grid gap-3 rounded-xl border border-ink-200 bg-white p-4">
+    <div className="grid gap-3 rounded-xl border border-border bg-surface p-4">
       <label className="grid gap-1.5 text-sm">
         <span className="font-medium text-ink-700">Document title</span>
         <input

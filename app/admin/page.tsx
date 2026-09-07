@@ -29,16 +29,16 @@ export default async function AdminHomePage() {
       <div className="mt-6 grid gap-4 sm:grid-cols-3">
         <Link
           href="/admin/enrollments?status=pending"
-          className="rounded-2xl border border-ink-200 bg-white p-5"
+          className="rounded-2xl border border-border bg-surface p-5"
         >
           <p className="text-sm text-ink-500">Pending enrollments</p>
           <p className="mt-2 font-serif text-4xl">{pendingCount}</p>
         </Link>
-        <Link href="/admin/courses" className="rounded-2xl border border-ink-200 bg-white p-5">
+        <Link href="/admin/courses" className="rounded-2xl border border-border bg-surface p-5">
           <p className="text-sm text-ink-500">Courses</p>
           <p className="mt-2 text-sm text-ink-700">Create, publish, and add sessions</p>
         </Link>
-        <Link href="/admin/users" className="rounded-2xl border border-ink-200 bg-white p-5">
+        <Link href="/admin/users" className="rounded-2xl border border-border bg-surface p-5">
           <p className="text-sm text-ink-500">Users</p>
           <p className="mt-2 text-sm text-ink-700">Roles and password resets</p>
         </Link>
@@ -50,7 +50,7 @@ export default async function AdminHomePage() {
       ) : (
         <ul className="mt-4 grid gap-2 text-sm">
           {recent.map((attempt) => (
-            <li key={attempt.id} className="rounded-xl border border-ink-200 bg-white px-4 py-3">
+            <li key={attempt.id} className="rounded-xl border border-border bg-surface px-4 py-3">
               <Link
                 className="font-medium hover:underline"
                 href={`/admin/results/${attempt.version.quiz.session.courseId}`}

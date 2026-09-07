@@ -60,7 +60,7 @@ export default async function AdminSessionPage({
           {session.documents.map((document) => (
             <li
               key={document.id}
-              className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-ink-200 bg-white px-4 py-3 text-sm"
+              className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-border bg-surface px-4 py-3 text-sm"
             >
               <span>
                 {document.title}{" "}
@@ -84,7 +84,7 @@ export default async function AdminSessionPage({
           {session.recordings.map((recording) => (
             <li
               key={recording.id}
-              className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-ink-200 bg-white px-4 py-3 text-sm"
+              className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-border bg-surface px-4 py-3 text-sm"
             >
               <a className="underline" href={recording.url} target="_blank" rel="noreferrer">
                 {recording.label}
@@ -104,7 +104,7 @@ export default async function AdminSessionPage({
       <section className="grid gap-6">
         <h2 className="font-serif text-2xl">Quizzes</h2>
         {session.quizzes.map((quiz) => (
-          <article key={quiz.id} className="rounded-xl border border-ink-200 bg-white p-4">
+          <article key={quiz.id} className="rounded-xl border border-border bg-surface p-4">
             <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
               <h3 className="font-medium">
                 {quiz.title}{" "}
@@ -125,7 +125,7 @@ export default async function AdminSessionPage({
             />
           </article>
         ))}
-        <div className="rounded-xl border border-dashed border-ink-200 p-4">
+        <div className="rounded-xl border border-dashed border-border p-4">
           <h3 className="mb-3 font-medium">Add a quiz</h3>
           <CreateQuizForm sessionId={session.id} />
         </div>

@@ -57,7 +57,7 @@ export default async function MePage() {
             return (
               <li
                 key={attempt.id}
-                className="rounded-xl border border-ink-200 bg-white p-4 text-sm"
+                className="rounded-xl border border-border bg-surface p-4 text-sm"
               >
                 <p className="font-medium">{attempt.version.quiz.title}</p>
                 <p className="text-ink-600">

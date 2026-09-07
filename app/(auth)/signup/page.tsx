@@ -18,7 +18,7 @@ export default async function SignupPage({
           Log in
         </Link>
       </p>
-      <div className="mt-8 rounded-2xl border border-ink-200 bg-white p-6 shadow-sm">
+      <div className="mt-8 rounded-2xl border border-border bg-surface p-6 shadow-sm">
         <SignupForm nextPath={next} />
       </div>
     </div>

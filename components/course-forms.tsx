@@ -10,7 +10,7 @@ export function CreateCourseForm() {
     null,
   );
   return (
-    <form action={action} className="grid gap-3 rounded-xl border border-ink-200 bg-white p-4">
+    <form action={action} className="grid gap-3 rounded-xl border border-border bg-surface p-4">
       <Field label="Title" name="title" required />
       <TextArea label="Summary" name="summary" />
       <Field

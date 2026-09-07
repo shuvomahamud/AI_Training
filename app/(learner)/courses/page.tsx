@@ -45,7 +45,7 @@ export default async function CoursesPage() {
             return (
               <li
                 key={course.id}
-                className="flex flex-col rounded-2xl border border-ink-200 bg-white p-5 shadow-sm"
+                className="flex flex-col rounded-2xl border border-border bg-surface p-5 shadow-sm"
               >
                 <h2 className="font-serif text-2xl">
                   <Link className="hover:underline" href={`/courses/${course.slug}`}>

@@ -42,8 +42,8 @@ export function ResultsTable({ attempts }: { attempts: AttemptRow[] }) {
   return (
     <div className="grid gap-6">
       {grouped.map(([email, rows]) => (
-        <section key={email} className="overflow-x-auto rounded-xl border border-ink-200">
-          <header className="border-b border-ink-200 bg-paper-50 px-4 py-2 text-sm">
+        <section key={email} className="overflow-x-auto rounded-xl border border-border">
+          <header className="border-b border-border bg-paper-50 px-4 py-2 text-sm">
             <span className="font-medium">{rows[0].learner}</span>{" "}
             <span className="text-ink-500">{email}</span>
           </header>

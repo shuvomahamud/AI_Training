@@ -21,7 +21,7 @@ export function EnrollmentButton({
 
   if (status === "pending") {
     return (
-      <p className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-950">
+      <p className="rounded-lg border border-warn-border bg-warn-surface px-4 py-3 text-sm text-warn">
         Access requested. An admin will approve it before you can open the
         sessions.
       </p>

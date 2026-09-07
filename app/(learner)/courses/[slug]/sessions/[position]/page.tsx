@@ -94,7 +94,7 @@ export default async function SessionPage({
             {session.documents.map((document) => (
               <article
                 key={document.id}
-                className="rounded-2xl border border-ink-200 bg-white p-5"
+                className="rounded-2xl border border-border bg-surface p-5"
               >
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <h3 className="font-medium">{document.title}</h3>
@@ -107,7 +107,7 @@ export default async function SessionPage({
                 </div>
                 {document.sourceType === "pdf" || !document.htmlContent ? (
                   <iframe
-                    className="mt-4 h-[70vh] w-full rounded-lg border border-ink-200"
+                    className="mt-4 h-[70vh] w-full rounded-lg border border-border"
                     title={document.title}
                     src={`/api/documents/${document.id}/file`}
                   />
@@ -162,7 +162,7 @@ export default async function SessionPage({
             return (
               <article
                 key={quiz.id}
-                className="rounded-2xl border border-ink-200 bg-paper-50 p-5"
+                className="rounded-2xl border border-border bg-paper-50 p-5"
               >
                 <QuizRunner
                   quizId={quiz.id}
@@ -176,7 +176,7 @@ export default async function SessionPage({
                   }))}
                 />
                 {history.length > 0 ? (
-                  <div className="mt-6 border-t border-ink-200 pt-4">
+                  <div className="mt-6 border-t border-border pt-4">
                     <h4 className="text-sm font-semibold">Your attempts</h4>
                     <ul className="mt-2 text-sm text-ink-600">
                       {history.map((attempt) => (

@@ -99,7 +99,7 @@ export default async function CourseDetailPage({
                     <li key={session.id}>
                       <Link
                         href={`/courses/${course.slug}/sessions/${session.position}`}
-                        className="block rounded-xl border border-ink-200 bg-white p-4 hover:border-accent-500"
+                        className="block rounded-xl border border-border bg-surface p-4 hover:border-accent-500"
                       >
                         <p className="text-xs font-semibold uppercase tracking-wide text-ink-500">
                           Session {session.position}

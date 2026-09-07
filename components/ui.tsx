@@ -87,7 +87,7 @@ export function SubmitButton({
 export function FormError({ message }: { message?: string }) {
   if (!message) return null;
   return (
-    <p className="rounded-md border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">
+    <p className="rounded-md border border-danger-border bg-danger-surface px-3 py-2 text-sm text-danger">
       {message}
     </p>
   );
@@ -96,7 +96,7 @@ export function FormError({ message }: { message?: string }) {
 export function FormOk({ show, message }: { show?: boolean; message: string }) {
   if (!show) return null;
   return (
-    <p className="rounded-md border border-teal-200 bg-teal-50 px-3 py-2 text-sm text-teal-900">
+    <p className="rounded-md border border-success-border bg-success-surface px-3 py-2 text-sm text-success">
       {message}
     </p>
   );
@@ -110,7 +110,7 @@ export function EmptyState({
   children?: React.ReactNode;
 }) {
   return (
-    <div className="rounded-xl border border-dashed border-ink-200 bg-paper-50 px-6 py-10 text-center">
+    <div className="rounded-xl border border-dashed border-border bg-paper-50 px-6 py-10 text-center">
       <p className="font-medium text-ink-800">{title}</p>
       {children ? (
         <div className="mt-2 text-sm text-ink-600">{children}</div>

@@ -83,12 +83,12 @@ export function QuizRunner({
         return (
           <fieldset
             key={question.id}
-            className="rounded-xl border border-ink-200 bg-white p-4"
+            className="rounded-xl border border-border bg-surface p-4"
           >
             <legend className="px-1 font-medium text-ink-900">
               {index + 1}. {question.prompt}
               {question.safetyCritical ? (
-                <span className="ml-2 rounded-full bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-900">
+                <span className="ml-2 rounded-full bg-warn-surface border border-warn-border px-2 py-0.5 text-xs font-semibold text-warn">
                   Safety-critical
                 </span>
               ) : null}
@@ -122,7 +122,7 @@ export function QuizRunner({
             </div>
             {feedback ? (
               <p
-                className={`mt-3 text-sm ${feedback.correct ? "text-teal-800" : "text-red-800"}`}
+                className={`mt-3 text-sm ${feedback.correct ? "text-success" : "text-danger"}`}
               >
                 {feedback.correct ? "Correct. " : "Not quite. "}
                 {feedback.explanation}
@@ -132,10 +132,10 @@ export function QuizRunner({
         );
       })}
 
-      {error ? <p className="text-sm text-red-800">{error}</p> : null}
+      {error ? <p className="text-sm text-danger">{error}</p> : null}
 
       {result ? (
-        <div className="rounded-xl border border-ink-200 bg-paper-50 p-4 text-sm">
+        <div className="rounded-xl border border-border bg-paper-50 p-4 text-sm">
           <p>
             Attempt {result.attemptNumber}: {result.score}/{result.maxScore}.{" "}
             {result.passed ? "Passed the score bar." : "Did not reach the passing score."}{" "}

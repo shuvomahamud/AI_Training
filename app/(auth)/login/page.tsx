@@ -19,7 +19,7 @@ export default async function LoginPage({
         </Link>
         . An account does not grant course access until an admin approves you.
       </p>
-      <div className="mt-8 rounded-2xl border border-ink-200 bg-white p-6 shadow-sm">
+      <div className="mt-8 rounded-2xl border border-border bg-surface p-6 shadow-sm">
         <LoginForm nextPath={next} />
       </div>
     </div>

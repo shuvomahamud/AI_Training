@@ -54,7 +54,7 @@ function QuizJsonForm({
       </label>
       <FormError message={state && "error" in state ? state.error : undefined} />
       {state && "issues" in state && state.issues ? (
-        <ul className="list-disc pl-5 text-sm text-red-800">
+        <ul className="list-disc pl-5 text-sm text-danger">
           {state.issues.map((issue) => (
             <li key={issue}>{issue}</li>
           ))}

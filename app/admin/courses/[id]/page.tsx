@@ -58,7 +58,7 @@ export default async function AdminCoursePage({
           {course.sessions.map((session, index) => (
             <li
               key={session.id}
-              className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-ink-200 bg-white px-4 py-3"
+              className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-border bg-surface px-4 py-3"
             >
               <Link className="font-medium hover:underline" href={`/admin/sessions/${session.id}`}>
                 {session.position}. {session.title}
