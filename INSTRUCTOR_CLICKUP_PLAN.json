@@ -1,0 +1,892 @@
+[
+  {
+    "Task ID": "AI-SETUP",
+    "Task Name": "00.1 - Set up the course website, Google Meet, and required references",
+    "Description content": "Prepare the instructor to deliver eight beginner Google Meet sessions for customer-facing employees. Each slot is 45 minutes: 40 planned minutes plus five minutes of contingency. A small learning website will provide ten independently shareable topic documents and one quiz per topic. Dates and actual assignees remain unset.\n\nDONE WHEN\nThe course website works as the learner hub, Google Meet delivery is configured, and cohort logistics, training-tool rules, product references, quiz behavior, and assessment expectations are recorded.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "AI-SETUP-COHORT|AI-SETUP-POLICY|AI-SETUP-PRODUCT|AI-SETUP-WEBSITE-SCOPE|AI-SETUP-WEBSITE-BUILD|AI-SETUP-WEBSITE-PUBLISH|AI-SETUP-MEET|AI-SETUP-ASSESSMENT|AI-SETUP-SCHEDULE",
+    "Checklist": "",
+    "Tags": "ai-course|instructor|course-setup",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-SETUP-COHORT",
+    "Task Name": "01 - Confirm the learners and facilitator coverage",
+    "Description content": "Confirm learner roles, starting knowledge, cohort size, accessibility needs, and instructor or coach coverage for Google Meet.\n\nDONE WHEN\nThe instructor has a roster and a workable grouping plan.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Record learner roles and cohort size|Record accessibility needs|Plan pairs and final role-play groups",
+    "Tags": "ai-course|instructor|course-setup",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-SETUP-POLICY",
+    "Task Name": "02 - Collect approved tools and company policy references",
+    "Description content": "Obtain the allowed training tools and data categories, access/retention rules, output-storage locations, incident-reporting route, and ownership/licensing guidance. Confirm the exact training use, not only the tool name.\n\nDONE WHEN\nDocument 07 can use actual reviewed rules and the instructor can explain permitted training use. Do not invent missing rules.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Confirm the approved training tool and permitted data|Record actual incident-reporting route|Link reviewed policy references|Identify the policy reviewer",
+    "Tags": "ai-course|instructor|course-setup",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-SETUP-PRODUCT",
+    "Task Name": "03 - Obtain the approved Talent Genie product brief",
+    "Description content": "Collect supported capabilities, intended users, limitations, data/integration needs, implementation expectations, and approved customer examples. The source course document does not establish any product feature.\n\nDONE WHEN\nAn approved brief supports Document 10. Generic Documents 01-09 can be drafted while this remains open.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Record the product owner and review date|Confirm supported capabilities and limitations|Collect recruiter and operations and executive examples",
+    "Tags": "ai-course|instructor|course-setup",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-SETUP-WEBSITE-SCOPE",
+    "Task Name": "04 - Define the course website and quiz behavior",
+    "Description content": "Define a compact learner hub with a course home page, eight session pages, ten topic-document sections, and one three-to-five-question quiz per topic. Decide whether quizzes give private self-check feedback or store named completion results. Confirm access, privacy, storage, retention, and reporting before collecting learner data.\n\nDONE WHEN\nThe site builder has an approved scope and no learner data will be collected without an approved tracking model.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Confirm the page and navigation structure|Choose self-check or named quiz tracking|Define website access and content ownership|Record accessibility and mobile requirements",
+    "Tags": "ai-course|instructor|course-setup",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-SETUP-WEBSITE-BUILD",
+    "Task Name": "05 - Build the small course website",
+    "Description content": "Build the course home page, eight session pages, document and quiz components, answer-feedback states, and an instructor-controlled content workflow. Each session page must show the outcome, the correct topic documents, the working document, preparation guidance, and the Google Meet event route.\n\nPREREQUISITES\n- AI-SETUP-WEBSITE-SCOPE\n\nDONE WHEN\nA learner can navigate from the course page to every session, document, and quiz on desktop and mobile.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Build the course and session navigation|Add reusable document and quiz components|Add clear working-document labels|Make pages responsive and keyboard accessible",
+    "Tags": "ai-course|instructor|course-setup",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-SETUP-WEBSITE-PUBLISH",
+    "Task Name": "06 - Test and publish the course website",
+    "Description content": "Test access, navigation, document downloads, quiz scoring and feedback, keyboard use, mobile layout, and error or offline fallbacks. Publish the reviewed site through the approved hosting location and record who can update content.\n\nPREREQUISITES\n- AI-SETUP-WEBSITE-BUILD\n\nDONE WHEN\nThe website is available to the intended learners, a sample topic path works end to end, and the fallback is documented.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Test a complete session path|Test all document and quiz links|Verify quiz feedback and any approved result storage|Publish and record the update process",
+    "Tags": "ai-course|instructor|course-setup",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-SETUP-MEET",
+    "Task Name": "07 - Configure Google Meet for the eight live sessions",
+    "Description content": "Create eight calendar events with Google Meet links, the correct instructors and learners, and the relevant session-page link. Confirm captions, screen sharing, recording policy, group-work approach, and backup facilitation.\n\nPREREQUISITES\n- AI-SETUP-COHORT\n\nDONE WHEN\nThe eight live-session events are ready and the instructor can run the planned activities through Google Meet.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Create eight Google Meet calendar events|Add session-page links and correct participants|Test screen sharing and captions|Confirm recording policy and group-work fallback",
+    "Tags": "ai-course|instructor|course-setup",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-SETUP-ASSESSMENT",
+    "Task Name": "08 - Confirm the learning checks and completion criteria",
+    "Description content": "Keep assessment proportionate to the six-hour course:\n\n- Use the first opening question as a baseline and session exit checks to identify misconceptions.\n- Provide one three-to-five-question website quiz for each of the ten topics, with immediate explanations. Use the approved tracking model: private self-check by default unless named result collection has been explicitly approved.\n- Review the Session 3 prompt and Session 6 pilot brief as applied checkpoints.\n- Use the final role-play to check discovery, clarity, accuracy, responsible use, and a relevant next step.\n- Fit four short final knowledge questions into the allocated four minutes, including submission. Cover capability fit, verification level, safe data use, and an unsupported product claim. A proposed completion standard is three correct, with designated safety-critical items correct. Use earlier checkpoints for depth rather than extending the final session.\n- Collect one main output per session. A merged session's output includes both topics without adding a second full assignment outside the schedule.\n- Give corrective feedback and a targeted retry for unsafe recommendations or unsupported product claims.\n\nFor role-play feedback, score each of the five dimensions 0 (missing), 1 (partial), or 2 (clear). A suggested coaching target is eight out of ten, with no unresolved accuracy or responsible-use issue. Keep peer feedback separate from formal assessor decisions.\n\nDONE WHEN\nAssessment criteria and reviewer responsibilities are clear. Any formal certification has separate staffing or assessment time.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Confirm formative checkpoints|Confirm safety-critical questions|Distinguish peer feedback from certification|Plan targeted retries",
+    "Tags": "ai-course|instructor|course-setup",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-SETUP-SCHEDULE",
+    "Task Name": "09 - Finalize the eight-session calendar and release schedule",
+    "Description content": "Choose dates for Sessions 1-8 in course order and align them with the Google Meet events and website releases. Reserve 45 minutes per session and allow preparation outside the learner slots. Confirm enough facilitators or coaches for final role-play groups; do not put four learner turns into three rounds.\n\nPREREQUISITES\n- AI-SETUP-COHORT\n- AI-SETUP-MEET\n- AI-SETUP-WEBSITE-PUBLISH\n\nDONE WHEN\nThe course calendar and coverage are workable. No dates or assignments have been assumed by this import.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Set eight session dates|Confirm instructor and coach availability|Schedule website document and quiz releases",
+    "Tags": "ai-course|instructor|course-setup",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-MATERIALS",
+    "Task Name": "00.2 - Prepare shared instructor and learner materials",
+    "Description content": "Use a fictional recruiting team that spends too much time preparing candidate updates and repeating administrative work. It wants faster turnaround, accurate communications, and human responsibility for hiring decisions.\n\nPrepare synthetic messages, a process description, sample timing data, and customer priorities. Label all fictional details. Reveal an additional customer constraint during Session 7 so learners update their earlier assumptions. Include non-recruiting examples elsewhere to show how skills transfer.\n\nThe facilitator pack needs eight timed agendas, worked examples, answer keys, group instructions, and feedback criteria. Keep it separate from the ten learner documents. A combined workbook may be assembled later, but every topic must remain independently shareable.\n\nDONE WHEN\nShared examples, document conventions, rubrics, prepared outputs, and facilitator records are usable.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "AI-MAT-CASE|AI-MAT-TEMPLATE|AI-MAT-FACILITATOR|AI-MAT-ASSESSMENT|AI-MAT-FALLBACK",
+    "Checklist": "",
+    "Tags": "ai-course|instructor|shared-materials",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-MAT-CASE",
+    "Task Name": "01 - Build the fictional customer case pack",
+    "Description content": "Create synthetic recruiting-account messages, a customer-call handover, a process description, customer priorities, and clearly labeled sample timing data. Include a new constraint to reveal in Session 7. Add non-recruiting examples where useful. This is training data, not a claim about Talent Genie.\n\nDONE WHEN\nThe examples can support Sessions 1-8 without real customer information or assumed product features.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Label all fictional details|Prepare short self-contained context cards|Keep human responsibility for hiring decisions explicit",
+    "Tags": "ai-course|instructor|shared-materials",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-MAT-TEMPLATE",
+    "Task Name": "02 - Set the common topic-document structure",
+    "Description content": "Create ten individually shareable documents. Each should support the live activity and help an employee perform the same task later without a facilitator.\n\nCreate one website quiz for each topic document. The quiz should test the document's observable outcome, use realistic customer or work decisions, explain the correct answer, and identify safety-critical questions where applicable. A merged live session therefore has two separate topic quizzes even though learners use one working document during the call.\n\nTeaching-text target: Approximately 600–900 words, usually two to three readable pages, for the essential explanation, short worked example, and customer language. This is not a total-document word or page limit.\n\nExercise and reference appendices: Keep worksheets, longer scenarios, reference extracts, full policy tables, three self-check questions, and answer rationales outside the teaching-text word count. Label these sections clearly within the same shareable topic document. Put the activity and blank working sheet before the model answer; identify the exact working page in the session agenda. Document 06 needs its fictional brief and evidence extracts; Document 07 needs complete policy context for every scenario. Do not shorten those materials merely to meet a word target.\n\nUse the same practical structure for every document:\n\n1. Customer or work question: The real problem this topic helps the learner handle.\n2. Observable outcome: One clear statement beginning “After this topic, you can…”\n3. Essential explanation: Three to five central ideas in plain language.\n4. Worked example: Relevant input, response or decision, and an explanation of why it works.\n5. Customer language: A short explanation to use and a common claim to avoid.\n6. Reusable aid: A topic-specific template, checklist, decision guide, or question set.\n7. Core exercise and three self-check questions: Include a brief model response or rationale after the exercise. Use these questions as the starting point for the website quiz, then rewrite them as needed for clear feedback. Keep facilitator scoring notes separate.\n8. References and maintenance: Source material and, where relevant, approved product or policy references, review date, and content owner.\n\nBefore sharing, check that:\n\n- Every section helps the learner explain something to a customer, perform a relevant task, or make an appropriate decision.\n- Examples connect to customer conversations, recruiting administration, sales preparation, support responses, or operations.\n- Technical detail explains a practical behavior or limitation. Mathematical detail and model architecture are outside this beginner course.\n- Examples identify the input, useful result, and required human review.\n- Each document has a distinct purpose. Cross-reference related handouts instead of repeating whole sections.\n- Fictional examples are labeled; generic AI uses are not described as Talent Genie features; proposed benefits are not presented as measured results.\n- The reusable aid is easy to find during work.\n\nDONE WHEN\nAll ten documents can follow one practical structure while remaining independently shareable.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Keep teaching text at approximately 600-900 words|Put full exercise assets and answers in labeled appendices|Make the working page easy to locate|Include three self-check questions per topic",
+    "Tags": "ai-course|instructor|shared-materials",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-MAT-FACILITATOR",
+    "Task Name": "03 - Create the instructor notes and feedback-record template",
+    "Description content": "Prepare a template for session outcome, agenda, materials, exact working page, demonstration, exercise instructions, misconceptions, answer key, attendance, unresolved questions, and corrective feedback. Include explicit setup and transition time.\n\nDONE WHEN\nEach instructor can record preparation, delivery, and follow-up using the same structure.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Include the 40-minute activity budget and five-minute buffer|Add fields for learner outputs and follow-up|Separate instructor answer keys from learner working pages",
+    "Tags": "ai-course|instructor|shared-materials",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-MAT-ASSESSMENT",
+    "Task Name": "04 - Prepare shared answer-key and assessment templates",
+    "Description content": "Keep assessment proportionate to the six-hour course:\n\n- Use the first opening question as a baseline and session exit checks to identify misconceptions.\n- Provide one three-to-five-question website quiz for each of the ten topics, with immediate explanations. Use the approved tracking model: private self-check by default unless named result collection has been explicitly approved.\n- Review the Session 3 prompt and Session 6 pilot brief as applied checkpoints.\n- Use the final role-play to check discovery, clarity, accuracy, responsible use, and a relevant next step.\n- Fit four short final knowledge questions into the allocated four minutes, including submission. Cover capability fit, verification level, safe data use, and an unsupported product claim. A proposed completion standard is three correct, with designated safety-critical items correct. Use earlier checkpoints for depth rather than extending the final session.\n- Collect one main output per session. A merged session's output includes both topics without adding a second full assignment outside the schedule.\n- Give corrective feedback and a targeted retry for unsafe recommendations or unsupported product claims.\n\nFor role-play feedback, score each of the five dimensions 0 (missing), 1 (partial), or 2 (clear). A suggested coaching target is eight out of ten, with no unresolved accuracy or responsible-use issue. Keep peer feedback separate from formal assessor decisions.\n\nPREREQUISITES\n- AI-SETUP-ASSESSMENT\n\nDONE WHEN\nThe instructor can distinguish factual accuracy, responsible use, and communication quality when reviewing work.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Prepare prompt and pilot-brief checkpoint criteria|Prepare the five-dimension role-play rubric|Prepare four short final questions|Write answer rationales and retry guidance",
+    "Tags": "ai-course|instructor|shared-materials",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-MAT-FALLBACK",
+    "Task Name": "05 - Prepare demonstration and tool-access fallbacks",
+    "Description content": "Prepare fixed AI outputs for demonstrations and exercises so lessons do not depend on a live model producing a specific answer or error. Keep the input and output side by side. Use only fictional or explicitly approved training data.\n\nDONE WHEN\nThe lesson can continue if the approved AI tool or a screen share fails.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Prepare useful and flawed sample outputs|Provide an offline worksheet alternative|Test display and learner access",
+    "Tags": "ai-course|instructor|shared-materials",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S01",
+    "Task Name": "01 - Session 1: AI foundations and useful capabilities",
+    "Description content": "LEARNER OUTCOME\nA plain-language 60-second explanation and defensible scenario choices.\n\nLIVE SLOT: 45 minutes; 40 minutes of planned activity plus five minutes of contingency.\nSHARE: Document 01, Document 02.\nWORKING DOCUMENT: Document 02.\nDELIVERY: Google Meet. MATERIALS: course website, with one quiz for each topic.\nAdvance reading is optional. Preparation, topic quizzes, and instructor follow-up are outside the learner's live slot.\nComplete preparation subtasks before teaching. Instructor tasks can be prepared ahead of the delivery sequence.\n\nDONE WHEN\nThe handouts and instructor notes are ready, the session has been delivered, and learner work has been reviewed with follow-up recorded.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "AI-S01-DOC01|AI-S01-QUIZ01|AI-S01-DOC02|AI-S01-QUIZ02|AI-S01-PREP|AI-S01-REHEARSE|AI-S01-RELEASE|AI-S01-DELIVER|AI-S01-REVIEW",
+    "Checklist": "",
+    "Tags": "ai-course|instructor|live-session|session-01",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S01-DOC01",
+    "Task Name": "01 - Prepare Document 01: Explaining AI in plain language",
+    "Description content": "Customer question: “What could AI actually help our team do?”\n\nCover a simple definition, drafting, summarizing, classification, pattern recognition, human judgment, and common misconceptions. Use a fictional customer-conversation summary to show usefulness and a limitation.\n\nReusable aid: A 60-second explanation framework: what AI does → customer example → limitation → review needed.\n\nLive exercise: Prepare and deliver the explanation using the prompt reproduced on Document 02's working sheet. It must be understandable, relevant, and avoid implying that AI always knows the correct answer. Document 01 remains the standalone explanation and read-after reference.\n\nBoundary: Explain usefulness and limitations here; reserve capability comparisons for Document 02.\n\nPREREQUISITES\n- AI-MAT-CASE\n- AI-MAT-TEMPLATE\n\nINSTRUCTOR NOTES\nPrepare one independent file for this topic. The instructor may delegate drafting, but must review it before teaching. This task creates the handout; the JSON import itself does not contain a finished learner document.\n\nDONE WHEN\nThe separately shareable handout contains an observable outcome, relevant teaching text, worked example, reusable aid, core exercise, three self-checks, and answer rationales. The teaching text targets 600-900 words; exercise assets and reference appendices are outside that count. References are checked and the final release copy has no unresolved placeholders.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Write the plain-language explanation and customer example|Build the reusable working aid|Add complete exercise assets in appendices|Write three self-checks and answer rationales|Check facts and applicable approved references|Label topic and session and working page",
+    "Tags": "ai-course|instructor|handout|topic-01|session-01",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S01-QUIZ01",
+    "Task Name": "02 - Create website quiz for Topic 01",
+    "Description content": "Create a three-to-five-question website quiz for Document 01: Explaining AI in plain language. Test the topic's observable outcome with realistic customer or work decisions. Provide immediate answer feedback that explains why the answer is correct. Mark safety-critical questions where applicable. Use only the approved quiz-result model; do not collect learner identity or results unless tracking has been approved.\n\nPREREQUISITES\n- AI-S01-DOC01\n- AI-SETUP-WEBSITE-BUILD\n- AI-SETUP-WEBSITE-SCOPE\n\nDONE WHEN\nThe quiz is published on the correct topic section, works on desktop and mobile, gives clear answer feedback, and every answer matches the reviewed handout and applicable product or policy reference.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Write three to five relevant questions|Write clear feedback for every answer|Mark safety-critical questions where applicable|Check answers against the reviewed document|Test quiz behavior and accessibility",
+    "Tags": "ai-course|instructor|website-quiz|topic-01|session-01",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S01-DOC02",
+    "Task Name": "03 - Prepare Document 02: Matching AI capabilities to business needs",
+    "Description content": "Customer question: “Do we need a chatbot, forecasting, generated content, or ordinary automation?”\n\nTeach three practical uses live: find patterns, generate content, and automate steps. These are a teaching framework, not mutually exclusive AI categories. The reference comparison table retains machine learning, generative AI, conversational AI, predictive AI, and workflow automation, explains their overlap, and notes that automation can work without AI. Point briefly to predictive uses and conversational interfaces without teaching a five-part taxonomy live.\n\nReusable aid: A comparison table connecting business task, suitable approach, input, and review point. Its working sheet contains the three core scenarios and the 60-second explanation prompt, so learners need only this document open in Session 1.\n\nLive exercise: Match three short scenarios to an approach and explain one choice to a partner. Include one case where a simple rule or existing process is sufficient. Add two optional scenarios.\n\nBoundary: Teach selection logic instead of a changing catalog of vendors.\n\nPREREQUISITES\n- AI-MAT-CASE\n- AI-MAT-TEMPLATE\n\nINSTRUCTOR NOTES\nPrepare one independent file for this topic. The instructor may delegate drafting, but must review it before teaching. This task creates the handout; the JSON import itself does not contain a finished learner document.\n\nDONE WHEN\nThe separately shareable handout contains an observable outcome, relevant teaching text, worked example, reusable aid, core exercise, three self-checks, and answer rationales. The teaching text targets 600-900 words; exercise assets and reference appendices are outside that count. References are checked and the final release copy has no unresolved placeholders.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Write the plain-language explanation and customer example|Build the reusable working aid|Add complete exercise assets in appendices|Write three self-checks and answer rationales|Check facts and applicable approved references|Label topic and session and working page",
+    "Tags": "ai-course|instructor|handout|topic-02|session-01",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S01-QUIZ02",
+    "Task Name": "04 - Create website quiz for Topic 02",
+    "Description content": "Create a three-to-five-question website quiz for Document 02: Matching AI capabilities to business needs. Test the topic's observable outcome with realistic customer or work decisions. Provide immediate answer feedback that explains why the answer is correct. Mark safety-critical questions where applicable. Use only the approved quiz-result model; do not collect learner identity or results unless tracking has been approved.\n\nPREREQUISITES\n- AI-S01-DOC02\n- AI-SETUP-WEBSITE-BUILD\n- AI-SETUP-WEBSITE-SCOPE\n\nDONE WHEN\nThe quiz is published on the correct topic section, works on desktop and mobile, gives clear answer feedback, and every answer matches the reviewed handout and applicable product or policy reference.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Write three to five relevant questions|Write clear feedback for every answer|Mark safety-critical questions where applicable|Check answers against the reviewed document|Test quiz behavior and accessibility",
+    "Tags": "ai-course|instructor|website-quiz|topic-02|session-01",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S01-PREP",
+    "Task Name": "05 - Prepare the demonstration and instructor run sheet",
+    "Description content": "Prepare the timed teaching sequence for Session 1.\n\nAGENDA\nActivity clock: minutes:seconds from the start, excluding interruptions.\n00:00-04:00: Opening question and basic training-data rules\n04:00-12:00: What AI is, useful tasks, and limitations\n12:00-19:00: Three practical uses: find patterns, generate content, automate steps\n19:00-24:00: Worked customer examples\n24:00-26:00: Explain the worksheet and form pairs\n26:00-35:00: Paired scenario matching and 60-second explanations\n35:00-40:00: Feedback and exit check\nReserve: 5 minutes of contingency within the 45-minute slot. Activity offsets above exclude interruptions; use the reserve when needed. Do not fill unused reserve with additional required content.\n\nPREREQUISITES\n- AI-S01-DOC01\n- AI-S01-DOC02\n- AI-MAT-FACILITATOR\n- AI-MAT-FALLBACK\n- AI-MAT-ASSESSMENT\n\nINSTRUCTOR NOTES\nCustomer question: “What could AI actually help our team do?”\n\nCover a simple definition, drafting, summarizing, classification, pattern recognition, human judgment, and common misconceptions. Use a fictional customer-conversation summary to show usefulness and a limitation.\n\nReusable aid: A 60-second explanation framework: what AI does → customer example → limitation → review needed.\n\nLive exercise: Prepare and deliver the explanation using the prompt reproduced on Document 02's working sheet. It must be understandable, relevant, and avoid implying that AI always knows the correct answer. Document 01 remains the standalone explanation and read-after reference.\n\nBoundary: Explain usefulness and limitations here; reserve capability comparisons for Document 02.\n\nCustomer question: “Do we need a chatbot, forecasting, generated content, or ordinary automation?”\n\nTeach three practical uses live: find patterns, generate content, and automate steps. These are a teaching framework, not mutually exclusive AI categories. The reference comparison table retains machine learning, generative AI, conversational AI, predictive AI, and workflow automation, explains their overlap, and notes that automation can work without AI. Point briefly to predictive uses and conversational interfaces without teaching a five-part taxonomy live.\n\nReusable aid: A comparison table connecting business task, suitable approach, input, and review point. Its working sheet contains the three core scenarios and the 60-second explanation prompt, so learners need only this document open in Session 1.\n\nLive exercise: Match three short scenarios to an approach and explain one choice to a partner. Include one case where a simple rule or existing process is sufficient. Add two optional scenarios.\n\nBoundary: Teach selection logic instead of a changing catalog of vendors.\n\nBefore any AI demonstration, establish three rules: use the approved training tool, use fictional or explicitly approved training data, and review outputs before using or sharing them. Session 5 develops the full policy guidance.\n\nTeach the three practical uses as overlapping ways of helping with work, not a formal taxonomy. Briefly point to forecasting and conversational interfaces in Document 02's fuller comparison table. Do not spend live time memorizing five category definitions.\n\nDONE WHEN\nThe run sheet identifies the exact working page, demo, setup, practice instructions, expected answers, misconceptions, and exit check. All core activity fits the planned budget; prepared-output fallbacks are available.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Select the relevant demo and context card|Prepare instructions and expected answers|Budget setup and role changes explicitly|Keep five minutes unallocated|Check the fallback materials",
+    "Tags": "ai-course|instructor|preparation|session-01",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S01-REHEARSE",
+    "Task Name": "06 - Rehearse Session 1 in Google Meet",
+    "Description content": "Run a timed rehearsal through the actual Google Meet setup and the draft session page. Check website access, document links, quiz behavior, screen sharing, instructions, pairing or roles, transitions, practice, and submission. Simplify inputs or reduce whole-group reporting if planned activity exceeds 40 minutes; preserve practice and safety-critical feedback.\n\nPREREQUISITES\n- AI-S01-PREP\n- AI-S01-QUIZ01\n- AI-S01-QUIZ02\n- AI-SETUP-WEBSITE-PUBLISH\n- AI-SETUP-MEET\n\nDONE WHEN\nActual activity duration, issues, and fixes are recorded. The session fits 40 planned minutes, the five-minute reserve remains unallocated, and the website and Google Meet path work end to end.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Join through the scheduled Google Meet event|Open the correct website session and working document|Test topic quizzes and fallbacks|Time all activities and transitions|Resolve overruns and unclear instructions|Record actual duration and fixes",
+    "Tags": "ai-course|instructor|rehearsal|session-01",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S01-RELEASE",
+    "Task Name": "07 - Publish the session materials and quizzes",
+    "Description content": "Review and publish Document 01, Document 02 and their topic quizzes on the course website before Session 1. Direct learners to Document 02 as the working document. Test the Google Meet event route and explain that advance reading is optional.\n\nPREREQUISITES\n- AI-S01-REHEARSE\n- AI-SETUP-POLICY\n- AI-SETUP-SCHEDULE\n\nDONE WHEN\nThe reviewed handouts and quizzes are accessible on the correct session page, the working document is identified, group arrangements are ready, and no unsupported company or product claims remain.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Review the final handout and quiz versions|Publish them on the correct website session page|Identify the single working document|Test the Meet event route and fallback|Confirm group arrangements",
+    "Tags": "ai-course|instructor|release|session-01",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S01-DELIVER",
+    "Task Name": "08 - Deliver the 45-minute Google Meet session",
+    "Description content": "LEARNER OUTCOME\nA plain-language 60-second explanation and defensible scenario choices.\n\nOpen the course website's Session 1 page and use Document 02 as the working document.\n\nAGENDA\nActivity clock: minutes:seconds from the start, excluding interruptions.\n00:00-04:00: Opening question and basic training-data rules\n04:00-12:00: What AI is, useful tasks, and limitations\n12:00-19:00: Three practical uses: find patterns, generate content, automate steps\n19:00-24:00: Worked customer examples\n24:00-26:00: Explain the worksheet and form pairs\n26:00-35:00: Paired scenario matching and 60-second explanations\n35:00-40:00: Feedback and exit check\nReserve: 5 minutes of contingency within the 45-minute slot. Activity offsets above exclude interruptions; use the reserve when needed. Do not fill unused reserve with additional required content.\n\nPREREQUISITES\n- AI-S01-RELEASE\n\nINSTRUCTOR NOTES\nCustomer question: “What could AI actually help our team do?”\n\nCover a simple definition, drafting, summarizing, classification, pattern recognition, human judgment, and common misconceptions. Use a fictional customer-conversation summary to show usefulness and a limitation.\n\nReusable aid: A 60-second explanation framework: what AI does → customer example → limitation → review needed.\n\nLive exercise: Prepare and deliver the explanation using the prompt reproduced on Document 02's working sheet. It must be understandable, relevant, and avoid implying that AI always knows the correct answer. Document 01 remains the standalone explanation and read-after reference.\n\nBoundary: Explain usefulness and limitations here; reserve capability comparisons for Document 02.\n\nCustomer question: “Do we need a chatbot, forecasting, generated content, or ordinary automation?”\n\nTeach three practical uses live: find patterns, generate content, and automate steps. These are a teaching framework, not mutually exclusive AI categories. The reference comparison table retains machine learning, generative AI, conversational AI, predictive AI, and workflow automation, explains their overlap, and notes that automation can work without AI. Point briefly to predictive uses and conversational interfaces without teaching a five-part taxonomy live.\n\nReusable aid: A comparison table connecting business task, suitable approach, input, and review point. Its working sheet contains the three core scenarios and the 60-second explanation prompt, so learners need only this document open in Session 1.\n\nLive exercise: Match three short scenarios to an approach and explain one choice to a partner. Include one case where a simple rule or existing process is sufficient. Add two optional scenarios.\n\nBoundary: Teach selection logic instead of a changing catalog of vendors.\n\nBefore any AI demonstration, establish three rules: use the approved training tool, use fictional or explicitly approved training data, and review outputs before using or sharing them. Session 5 develops the full policy guidance.\n\nTeach the three practical uses as overlapping ways of helping with work, not a formal taxonomy. Briefly point to forecasting and conversational interfaces in Document 02's fuller comparison table. Do not spend live time memorizing five category definitions.\n\nDONE WHEN\nThe live activity is complete within the slot, each learner has an opportunity to practice, the exit check is collected, and any unresolved questions are recorded.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Open the designated working page|Use the relevant customer context|Run the demonstration and learner practice|Correct material misconceptions|Collect the output and exit check|Record actual timing and unresolved questions",
+    "Tags": "ai-course|instructor|delivery|session-01",
+    "Time Estimate": "45 min"
+  },
+  {
+    "Task ID": "AI-S01-REVIEW",
+    "Task Name": "09 - Review learner work and quiz follow-up",
+    "Description content": "Review Session 1's output: A plain-language 60-second explanation and defensible scenario choices. Use the handout answer key and the course feedback criteria. Review quiz results only if named tracking was approved; otherwise use anonymous questions and discussion patterns. Record attendance, missing work, common misconceptions, and targeted retries. Instructor review occurs outside the live learner slot.\n\nPREREQUISITES\n- AI-S01-DELIVER\n\nDONE WHEN\nOutputs have been reviewed; material accuracy or responsible-use errors receive corrective feedback; any retry, unanswered question, or material revision has an owner and next action.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Review the learner output against the criteria|Resolve or assign safety-critical corrections|Record missing work and targeted retries|Record improvements for the next delivery",
+    "Tags": "ai-course|instructor|learner-review|session-01",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S02",
+    "Task Name": "02 - Session 2: How language models work and why answers can be wrong",
+    "Description content": "LEARNER OUTCOME\nA two-minute explanation of learned language patterns, context, and why fluent output can still be incorrect.\n\nLIVE SLOT: 45 minutes; 40 minutes of planned activity plus five minutes of contingency.\nSHARE: Document 03.\nWORKING DOCUMENT: Document 03.\nDELIVERY: Google Meet. MATERIALS: course website, with one quiz for each topic.\nAdvance reading is optional. Preparation, topic quizzes, and instructor follow-up are outside the learner's live slot.\nComplete preparation subtasks before teaching. Instructor tasks can be prepared ahead of the delivery sequence.\n\nDONE WHEN\nThe handouts and instructor notes are ready, the session has been delivered, and learner work has been reviewed with follow-up recorded.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "AI-S02-DOC03|AI-S02-QUIZ03|AI-S02-PREP|AI-S02-REHEARSE|AI-S02-RELEASE|AI-S02-DELIVER|AI-S02-REVIEW",
+    "Checklist": "",
+    "Tags": "ai-course|instructor|live-session|session-02",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S02-DOC03",
+    "Task Name": "01 - Prepare Document 03: Understanding AI answers and their limitations",
+    "Description content": "Customer question: “Why can the AI give a polished answer that is wrong?”\n\nExplain learned language patterns, tokens, context limits, and generated responses in plain language. Distinguish generating an answer from verifying it. Use prepared examples with missing context and an unsupported assertion.\n\nReusable aid: A customer FAQ about incorrect answers, missing context, and checking important claims.\n\nLive exercise: Give a two-minute explanation without “algorithm,” “neural network,” or “probability model.”\n\nBoundary: Explain why review is necessary; Document 06 supplies the process. Check any product-specific behavior against current authoritative documentation during authoring.\n\nPREREQUISITES\n- AI-MAT-CASE\n- AI-MAT-TEMPLATE\n\nINSTRUCTOR NOTES\nPrepare one independent file for this topic. The instructor may delegate drafting, but must review it before teaching. This task creates the handout; the JSON import itself does not contain a finished learner document.\n\nDONE WHEN\nThe separately shareable handout contains an observable outcome, relevant teaching text, worked example, reusable aid, core exercise, three self-checks, and answer rationales. The teaching text targets 600-900 words; exercise assets and reference appendices are outside that count. References are checked and the final release copy has no unresolved placeholders.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Write the plain-language explanation and customer example|Build the reusable working aid|Add complete exercise assets in appendices|Write three self-checks and answer rationales|Check facts and applicable approved references|Label topic and session and working page",
+    "Tags": "ai-course|instructor|handout|topic-03|session-02",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S02-QUIZ03",
+    "Task Name": "02 - Create website quiz for Topic 03",
+    "Description content": "Create a three-to-five-question website quiz for Document 03: Understanding AI answers and their limitations. Test the topic's observable outcome with realistic customer or work decisions. Provide immediate answer feedback that explains why the answer is correct. Mark safety-critical questions where applicable. Use only the approved quiz-result model; do not collect learner identity or results unless tracking has been approved.\n\nPREREQUISITES\n- AI-S02-DOC03\n- AI-SETUP-WEBSITE-BUILD\n- AI-SETUP-WEBSITE-SCOPE\n\nDONE WHEN\nThe quiz is published on the correct topic section, works on desktop and mobile, gives clear answer feedback, and every answer matches the reviewed handout and applicable product or policy reference.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Write three to five relevant questions|Write clear feedback for every answer|Mark safety-critical questions where applicable|Check answers against the reviewed document|Test quiz behavior and accessibility",
+    "Tags": "ai-course|instructor|website-quiz|topic-03|session-02",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S02-PREP",
+    "Task Name": "03 - Prepare the demonstration and instructor run sheet",
+    "Description content": "Prepare the timed teaching sequence for Session 2.\n\nAGENDA\nActivity clock: minutes:seconds from the start, excluding interruptions.\n00:00-03:00: Opening customer question and recap\n03:00-12:00: Essential concepts\n12:00-19:00: Worked example or demonstration\n19:00-21:00: Activity instructions and pairing\n21:00-34:00: Learner activity\n34:00-38:00: Discussion and feedback\n38:00-40:00: Exit check\nReserve: 5 minutes of contingency within the 45-minute slot. Activity offsets above exclude interruptions; use the reserve when needed. Do not fill unused reserve with additional required content.\n\nPREREQUISITES\n- AI-S02-DOC03\n- AI-MAT-FACILITATOR\n- AI-MAT-FALLBACK\n- AI-MAT-ASSESSMENT\n\nINSTRUCTOR NOTES\nCustomer question: “Why can the AI give a polished answer that is wrong?”\n\nExplain learned language patterns, tokens, context limits, and generated responses in plain language. Distinguish generating an answer from verifying it. Use prepared examples with missing context and an unsupported assertion.\n\nReusable aid: A customer FAQ about incorrect answers, missing context, and checking important claims.\n\nLive exercise: Give a two-minute explanation without “algorithm,” “neural network,” or “probability model.”\n\nBoundary: Explain why review is necessary; Document 06 supplies the process. Check any product-specific behavior against current authoritative documentation during authoring.\n\nDONE WHEN\nThe run sheet identifies the exact working page, demo, setup, practice instructions, expected answers, misconceptions, and exit check. All core activity fits the planned budget; prepared-output fallbacks are available.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Select the relevant demo and context card|Prepare instructions and expected answers|Budget setup and role changes explicitly|Keep five minutes unallocated|Check the fallback materials",
+    "Tags": "ai-course|instructor|preparation|session-02",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S02-REHEARSE",
+    "Task Name": "04 - Rehearse Session 2 in Google Meet",
+    "Description content": "Run a timed rehearsal through the actual Google Meet setup and the draft session page. Check website access, document links, quiz behavior, screen sharing, instructions, pairing or roles, transitions, practice, and submission. Simplify inputs or reduce whole-group reporting if planned activity exceeds 40 minutes; preserve practice and safety-critical feedback.\n\nPREREQUISITES\n- AI-S02-PREP\n- AI-S02-QUIZ03\n- AI-SETUP-WEBSITE-PUBLISH\n- AI-SETUP-MEET\n\nDONE WHEN\nActual activity duration, issues, and fixes are recorded. The session fits 40 planned minutes, the five-minute reserve remains unallocated, and the website and Google Meet path work end to end.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Join through the scheduled Google Meet event|Open the correct website session and working document|Test topic quizzes and fallbacks|Time all activities and transitions|Resolve overruns and unclear instructions|Record actual duration and fixes",
+    "Tags": "ai-course|instructor|rehearsal|session-02",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S02-RELEASE",
+    "Task Name": "05 - Publish the session materials and quizzes",
+    "Description content": "Review and publish Document 03 and their topic quizzes on the course website before Session 2. Direct learners to Document 03 as the working document. Test the Google Meet event route and explain that advance reading is optional.\n\nPREREQUISITES\n- AI-S02-REHEARSE\n- AI-SETUP-POLICY\n- AI-SETUP-SCHEDULE\n\nDONE WHEN\nThe reviewed handouts and quizzes are accessible on the correct session page, the working document is identified, group arrangements are ready, and no unsupported company or product claims remain.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Review the final handout and quiz versions|Publish them on the correct website session page|Identify the single working document|Test the Meet event route and fallback|Confirm group arrangements",
+    "Tags": "ai-course|instructor|release|session-02",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S02-DELIVER",
+    "Task Name": "06 - Deliver the 45-minute Google Meet session",
+    "Description content": "LEARNER OUTCOME\nA two-minute explanation of learned language patterns, context, and why fluent output can still be incorrect.\n\nOpen the course website's Session 2 page and use Document 03 as the working document.\n\nAGENDA\nActivity clock: minutes:seconds from the start, excluding interruptions.\n00:00-03:00: Opening customer question and recap\n03:00-12:00: Essential concepts\n12:00-19:00: Worked example or demonstration\n19:00-21:00: Activity instructions and pairing\n21:00-34:00: Learner activity\n34:00-38:00: Discussion and feedback\n38:00-40:00: Exit check\nReserve: 5 minutes of contingency within the 45-minute slot. Activity offsets above exclude interruptions; use the reserve when needed. Do not fill unused reserve with additional required content.\n\nPREREQUISITES\n- AI-S02-RELEASE\n- AI-S01-DELIVER\n\nINSTRUCTOR NOTES\nCustomer question: “Why can the AI give a polished answer that is wrong?”\n\nExplain learned language patterns, tokens, context limits, and generated responses in plain language. Distinguish generating an answer from verifying it. Use prepared examples with missing context and an unsupported assertion.\n\nReusable aid: A customer FAQ about incorrect answers, missing context, and checking important claims.\n\nLive exercise: Give a two-minute explanation without “algorithm,” “neural network,” or “probability model.”\n\nBoundary: Explain why review is necessary; Document 06 supplies the process. Check any product-specific behavior against current authoritative documentation during authoring.\n\nDONE WHEN\nThe live activity is complete within the slot, each learner has an opportunity to practice, the exit check is collected, and any unresolved questions are recorded.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Open the designated working page|Use the relevant customer context|Run the demonstration and learner practice|Correct material misconceptions|Collect the output and exit check|Record actual timing and unresolved questions",
+    "Tags": "ai-course|instructor|delivery|session-02",
+    "Time Estimate": "45 min"
+  },
+  {
+    "Task ID": "AI-S02-REVIEW",
+    "Task Name": "07 - Review learner work and quiz follow-up",
+    "Description content": "Review Session 2's output: A two-minute explanation of learned language patterns, context, and why fluent output can still be incorrect. Use the handout answer key and the course feedback criteria. Review quiz results only if named tracking was approved; otherwise use anonymous questions and discussion patterns. Record attendance, missing work, common misconceptions, and targeted retries. Instructor review occurs outside the live learner slot.\n\nPREREQUISITES\n- AI-S02-DELIVER\n\nDONE WHEN\nOutputs have been reviewed; material accuracy or responsible-use errors receive corrective feedback; any retry, unanswered question, or material revision has an owner and next action.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Review the learner output against the criteria|Resolve or assign safety-critical corrections|Record missing work and targeted retries|Record improvements for the next delivery",
+    "Tags": "ai-course|instructor|learner-review|session-02",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S03",
+    "Task Name": "03 - Session 3: Write and improve useful prompts",
+    "Description content": "LEARNER OUTCOME\nAn original prompt, a structured improvement, a reviewed response, and one justified revision.\n\nLIVE SLOT: 45 minutes; 40 minutes of planned activity plus five minutes of contingency.\nSHARE: Document 04.\nWORKING DOCUMENT: Document 04.\nDELIVERY: Google Meet. MATERIALS: course website, with one quiz for each topic.\nAdvance reading is optional. Preparation, topic quizzes, and instructor follow-up are outside the learner's live slot.\nComplete preparation subtasks before teaching. Instructor tasks can be prepared ahead of the delivery sequence.\n\nDONE WHEN\nThe handouts and instructor notes are ready, the session has been delivered, and learner work has been reviewed with follow-up recorded.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "AI-S03-DOC04|AI-S03-QUIZ04|AI-S03-PREP|AI-S03-REHEARSE|AI-S03-RELEASE|AI-S03-DELIVER|AI-S03-REVIEW",
+    "Checklist": "",
+    "Tags": "ai-course|instructor|live-session|session-03",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S03-DOC04",
+    "Task Name": "01 - Prepare Document 04: Writing prompts for useful business results",
+    "Description content": "Work question: “How do I turn a vague request into a useful draft?”\n\nCover goal, context, instructions, constraints, audience, format, examples, and revision. Show weak and improved prompts for a fictional customer follow-up email.\n\nReusable aid: A fill-in prompt template that requires missing information to be flagged and unsupported claims to be avoided.\n\nLive exercise: Improve a prompt, inspect its output, and revise one instruction. Supply prepared responses if tool access is unavailable.\n\nSuccess check: Goal, context, constraints, and format are present; the revision addresses an actual weakness.\n\nPREREQUISITES\n- AI-MAT-CASE\n- AI-MAT-TEMPLATE\n\nINSTRUCTOR NOTES\nPrepare one independent file for this topic. The instructor may delegate drafting, but must review it before teaching. This task creates the handout; the JSON import itself does not contain a finished learner document.\n\nDONE WHEN\nThe separately shareable handout contains an observable outcome, relevant teaching text, worked example, reusable aid, core exercise, three self-checks, and answer rationales. The teaching text targets 600-900 words; exercise assets and reference appendices are outside that count. References are checked and the final release copy has no unresolved placeholders.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Write the plain-language explanation and customer example|Build the reusable working aid|Add complete exercise assets in appendices|Write three self-checks and answer rationales|Check facts and applicable approved references|Label topic and session and working page",
+    "Tags": "ai-course|instructor|handout|topic-04|session-03",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S03-QUIZ04",
+    "Task Name": "02 - Create website quiz for Topic 04",
+    "Description content": "Create a three-to-five-question website quiz for Document 04: Writing prompts for useful business results. Test the topic's observable outcome with realistic customer or work decisions. Provide immediate answer feedback that explains why the answer is correct. Mark safety-critical questions where applicable. Use only the approved quiz-result model; do not collect learner identity or results unless tracking has been approved.\n\nPREREQUISITES\n- AI-S03-DOC04\n- AI-SETUP-WEBSITE-BUILD\n- AI-SETUP-WEBSITE-SCOPE\n\nDONE WHEN\nThe quiz is published on the correct topic section, works on desktop and mobile, gives clear answer feedback, and every answer matches the reviewed handout and applicable product or policy reference.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Write three to five relevant questions|Write clear feedback for every answer|Mark safety-critical questions where applicable|Check answers against the reviewed document|Test quiz behavior and accessibility",
+    "Tags": "ai-course|instructor|website-quiz|topic-04|session-03",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S03-PREP",
+    "Task Name": "03 - Prepare the demonstration and instructor run sheet",
+    "Description content": "Prepare the timed teaching sequence for Session 3.\n\nAGENDA\nActivity clock: minutes:seconds from the start, excluding interruptions.\n00:00-03:00: Opening customer question and recap\n03:00-12:00: Essential concepts\n12:00-19:00: Worked example or demonstration\n19:00-21:00: Activity instructions and pairing\n21:00-34:00: Learner activity\n34:00-38:00: Discussion and feedback\n38:00-40:00: Exit check\nReserve: 5 minutes of contingency within the 45-minute slot. Activity offsets above exclude interruptions; use the reserve when needed. Do not fill unused reserve with additional required content.\n\nPREREQUISITES\n- AI-S03-DOC04\n- AI-MAT-FACILITATOR\n- AI-MAT-FALLBACK\n- AI-MAT-ASSESSMENT\n\nINSTRUCTOR NOTES\nWork question: “How do I turn a vague request into a useful draft?”\n\nCover goal, context, instructions, constraints, audience, format, examples, and revision. Show weak and improved prompts for a fictional customer follow-up email.\n\nReusable aid: A fill-in prompt template that requires missing information to be flagged and unsupported claims to be avoided.\n\nLive exercise: Improve a prompt, inspect its output, and revise one instruction. Supply prepared responses if tool access is unavailable.\n\nSuccess check: Goal, context, constraints, and format are present; the revision addresses an actual weakness.\n\nDONE WHEN\nThe run sheet identifies the exact working page, demo, setup, practice instructions, expected answers, misconceptions, and exit check. All core activity fits the planned budget; prepared-output fallbacks are available.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Select the relevant demo and context card|Prepare instructions and expected answers|Budget setup and role changes explicitly|Keep five minutes unallocated|Check the fallback materials",
+    "Tags": "ai-course|instructor|preparation|session-03",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S03-REHEARSE",
+    "Task Name": "04 - Rehearse Session 3 in Google Meet",
+    "Description content": "Run a timed rehearsal through the actual Google Meet setup and the draft session page. Check website access, document links, quiz behavior, screen sharing, instructions, pairing or roles, transitions, practice, and submission. Simplify inputs or reduce whole-group reporting if planned activity exceeds 40 minutes; preserve practice and safety-critical feedback.\n\nPREREQUISITES\n- AI-S03-PREP\n- AI-S03-QUIZ04\n- AI-SETUP-WEBSITE-PUBLISH\n- AI-SETUP-MEET\n\nDONE WHEN\nActual activity duration, issues, and fixes are recorded. The session fits 40 planned minutes, the five-minute reserve remains unallocated, and the website and Google Meet path work end to end.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Join through the scheduled Google Meet event|Open the correct website session and working document|Test topic quizzes and fallbacks|Time all activities and transitions|Resolve overruns and unclear instructions|Record actual duration and fixes",
+    "Tags": "ai-course|instructor|rehearsal|session-03",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S03-RELEASE",
+    "Task Name": "05 - Publish the session materials and quizzes",
+    "Description content": "Review and publish Document 04 and their topic quizzes on the course website before Session 3. Direct learners to Document 04 as the working document. Test the Google Meet event route and explain that advance reading is optional.\n\nPREREQUISITES\n- AI-S03-REHEARSE\n- AI-SETUP-POLICY\n- AI-SETUP-SCHEDULE\n\nDONE WHEN\nThe reviewed handouts and quizzes are accessible on the correct session page, the working document is identified, group arrangements are ready, and no unsupported company or product claims remain.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Review the final handout and quiz versions|Publish them on the correct website session page|Identify the single working document|Test the Meet event route and fallback|Confirm group arrangements",
+    "Tags": "ai-course|instructor|release|session-03",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S03-DELIVER",
+    "Task Name": "06 - Deliver the 45-minute Google Meet session",
+    "Description content": "LEARNER OUTCOME\nAn original prompt, a structured improvement, a reviewed response, and one justified revision.\n\nOpen the course website's Session 3 page and use Document 04 as the working document.\n\nAGENDA\nActivity clock: minutes:seconds from the start, excluding interruptions.\n00:00-03:00: Opening customer question and recap\n03:00-12:00: Essential concepts\n12:00-19:00: Worked example or demonstration\n19:00-21:00: Activity instructions and pairing\n21:00-34:00: Learner activity\n34:00-38:00: Discussion and feedback\n38:00-40:00: Exit check\nReserve: 5 minutes of contingency within the 45-minute slot. Activity offsets above exclude interruptions; use the reserve when needed. Do not fill unused reserve with additional required content.\n\nPREREQUISITES\n- AI-S03-RELEASE\n- AI-S02-DELIVER\n\nINSTRUCTOR NOTES\nWork question: “How do I turn a vague request into a useful draft?”\n\nCover goal, context, instructions, constraints, audience, format, examples, and revision. Show weak and improved prompts for a fictional customer follow-up email.\n\nReusable aid: A fill-in prompt template that requires missing information to be flagged and unsupported claims to be avoided.\n\nLive exercise: Improve a prompt, inspect its output, and revise one instruction. Supply prepared responses if tool access is unavailable.\n\nSuccess check: Goal, context, constraints, and format are present; the revision addresses an actual weakness.\n\nDONE WHEN\nThe live activity is complete within the slot, each learner has an opportunity to practice, the exit check is collected, and any unresolved questions are recorded.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Open the designated working page|Use the relevant customer context|Run the demonstration and learner practice|Correct material misconceptions|Collect the output and exit check|Record actual timing and unresolved questions",
+    "Tags": "ai-course|instructor|delivery|session-03",
+    "Time Estimate": "45 min"
+  },
+  {
+    "Task ID": "AI-S03-REVIEW",
+    "Task Name": "07 - Review learner work and quiz follow-up",
+    "Description content": "Review Session 3's output: An original prompt, a structured improvement, a reviewed response, and one justified revision. Use the handout answer key and the course feedback criteria. Review quiz results only if named tracking was approved; otherwise use anonymous questions and discussion patterns. Record attendance, missing work, common misconceptions, and targeted retries. Instructor review occurs outside the live learner slot.\n\nPREREQUISITES\n- AI-S03-DELIVER\n\nDONE WHEN\nOutputs have been reviewed; material accuracy or responsible-use errors receive corrective feedback; any retry, unanswered question, or material revision has an owner and next action.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Review the learner output against the criteria|Resolve or assign safety-critical corrections|Record missing work and targeted retries|Record improvements for the next delivery",
+    "Tags": "ai-course|instructor|learner-review|session-03",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S04",
+    "Task Name": "04 - Session 4: Choose verification effort and check AI output",
+    "Description content": "LEARNER OUTCOME\nA claim log that finds three material errors and explains the appropriate verification level.\n\nLIVE SLOT: 45 minutes; 40 minutes of planned activity plus five minutes of contingency.\nSHARE: Document 06.\nWORKING DOCUMENT: Document 06.\nDELIVERY: Google Meet. MATERIALS: course website, with one quiz for each topic.\nAdvance reading is optional. Preparation, topic quizzes, and instructor follow-up are outside the learner's live slot.\nComplete preparation subtasks before teaching. Instructor tasks can be prepared ahead of the delivery sequence.\n\nDONE WHEN\nThe handouts and instructor notes are ready, the session has been delivered, and learner work has been reviewed with follow-up recorded.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "AI-S04-DOC06|AI-S04-QUIZ06|AI-S04-PREP|AI-S04-REHEARSE|AI-S04-RELEASE|AI-S04-DELIVER|AI-S04-REVIEW",
+    "Checklist": "",
+    "Tags": "ai-course|instructor|live-session|session-04",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S04-DOC06",
+    "Task Name": "01 - Prepare Document 06: Checking AI output before using it",
+    "Description content": "Work question: “What needs checking before I share this answer with a customer?”\n\nOrganize the topic around the consequences of error: decide the verification effort first, then check the relevant claims. Cover hallucinations, names, dates, figures, quotations, citations, trusted current sources, and appropriate reviewers.\n\nUse a fictional recruiting-account handover brief prepared for a customer call. Supply a short context card explaining the work and intended audience, so the example makes sense before the later business-use-case session. Include three planted material errors and enough reference extracts to check them within the exercise time.\n\nProposed teaching ladder, subordinate to company policy:\n\nSituation: Low-consequence, reversible internal drafting; Verification approach: Read for relevance and errors; confirm any factual statements before reuse; Exercise example: Internal brainstorming notes using fictional information\nSituation: Customer-facing statements or operational commitments; Verification approach: Check material facts against trusted current records; resolve or remove unsupported claims before sharing; Exercise example: Candidate availability or a promised follow-up date\nSituation: Output affecting hiring, legal, financial, privacy, safety, or major reputational outcomes; Verification approach: Obtain appropriate qualified human review and required approvals; stop if evidence or authority is insufficient; Exercise example: An unsupported recommendation to reject a candidate\n\nClassify by intended use and consequence, not by how confident the AI sounds or which tool produced it. A draft can move into a higher tier when its audience or use changes. This ladder is a training aid, not a substitute for company policy or specialist judgment.\n\nReusable aid: A checklist ordered as intended use → consequence of error → review level → claims and evidence → unresolved items → decision to use, revise, or escalate. The log records the claim, risk tier and reason, source or reviewer, finding, and status.\n\nLive exercise: Assign a review level, find the errors, and identify unresolved claims. Then explain what changes if the brief is used for a hiring decision rather than an internal discussion. Supply an answer rationale tied to the evidence and proposed use.\n\nSuccess check: Finds all three material errors and chooses a defensible verification level and reviewer. Asking the same model again is not treated as independent verification.\n\nPREREQUISITES\n- AI-MAT-CASE\n- AI-MAT-TEMPLATE\n\nINSTRUCTOR NOTES\nPrepare one independent file for this topic. The instructor may delegate drafting, but must review it before teaching. This task creates the handout; the JSON import itself does not contain a finished learner document.\n\nDONE WHEN\nThe separately shareable handout contains an observable outcome, relevant teaching text, worked example, reusable aid, core exercise, three self-checks, and answer rationales. The teaching text targets 600-900 words; exercise assets and reference appendices are outside that count. References are checked and the final release copy has no unresolved placeholders.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Write the plain-language explanation and customer example|Build the reusable working aid|Add complete exercise assets in appendices|Write three self-checks and answer rationales|Check facts and applicable approved references|Label topic and session and working page",
+    "Tags": "ai-course|instructor|handout|topic-06|session-04",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S04-QUIZ06",
+    "Task Name": "02 - Create website quiz for Topic 06",
+    "Description content": "Create a three-to-five-question website quiz for Document 06: Checking AI output before using it. Test the topic's observable outcome with realistic customer or work decisions. Provide immediate answer feedback that explains why the answer is correct. Mark safety-critical questions where applicable. Use only the approved quiz-result model; do not collect learner identity or results unless tracking has been approved.\n\nPREREQUISITES\n- AI-S04-DOC06\n- AI-SETUP-WEBSITE-BUILD\n- AI-SETUP-WEBSITE-SCOPE\n\nDONE WHEN\nThe quiz is published on the correct topic section, works on desktop and mobile, gives clear answer feedback, and every answer matches the reviewed handout and applicable product or policy reference.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Write three to five relevant questions|Write clear feedback for every answer|Mark safety-critical questions where applicable|Check answers against the reviewed document|Test quiz behavior and accessibility",
+    "Tags": "ai-course|instructor|website-quiz|topic-06|session-04",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S04-PREP",
+    "Task Name": "03 - Prepare the demonstration and instructor run sheet",
+    "Description content": "Prepare the timed teaching sequence for Session 4.\n\nAGENDA\nActivity clock: minutes:seconds from the start, excluding interruptions.\n00:00-03:00: Opening customer question and recap\n03:00-12:00: Essential concepts\n12:00-19:00: Worked example or demonstration\n19:00-21:00: Activity instructions and pairing\n21:00-34:00: Learner activity\n34:00-38:00: Discussion and feedback\n38:00-40:00: Exit check\nReserve: 5 minutes of contingency within the 45-minute slot. Activity offsets above exclude interruptions; use the reserve when needed. Do not fill unused reserve with additional required content.\n\nPREREQUISITES\n- AI-S04-DOC06\n- AI-MAT-FACILITATOR\n- AI-MAT-FALLBACK\n- AI-MAT-ASSESSMENT\n\nINSTRUCTOR NOTES\nWork question: “What needs checking before I share this answer with a customer?”\n\nOrganize the topic around the consequences of error: decide the verification effort first, then check the relevant claims. Cover hallucinations, names, dates, figures, quotations, citations, trusted current sources, and appropriate reviewers.\n\nUse a fictional recruiting-account handover brief prepared for a customer call. Supply a short context card explaining the work and intended audience, so the example makes sense before the later business-use-case session. Include three planted material errors and enough reference extracts to check them within the exercise time.\n\nProposed teaching ladder, subordinate to company policy:\n\nSituation: Low-consequence, reversible internal drafting; Verification approach: Read for relevance and errors; confirm any factual statements before reuse; Exercise example: Internal brainstorming notes using fictional information\nSituation: Customer-facing statements or operational commitments; Verification approach: Check material facts against trusted current records; resolve or remove unsupported claims before sharing; Exercise example: Candidate availability or a promised follow-up date\nSituation: Output affecting hiring, legal, financial, privacy, safety, or major reputational outcomes; Verification approach: Obtain appropriate qualified human review and required approvals; stop if evidence or authority is insufficient; Exercise example: An unsupported recommendation to reject a candidate\n\nClassify by intended use and consequence, not by how confident the AI sounds or which tool produced it. A draft can move into a higher tier when its audience or use changes. This ladder is a training aid, not a substitute for company policy or specialist judgment.\n\nReusable aid: A checklist ordered as intended use → consequence of error → review level → claims and evidence → unresolved items → decision to use, revise, or escalate. The log records the claim, risk tier and reason, source or reviewer, finding, and status.\n\nLive exercise: Assign a review level, find the errors, and identify unresolved claims. Then explain what changes if the brief is used for a hiring decision rather than an internal discussion. Supply an answer rationale tied to the evidence and proposed use.\n\nSuccess check: Finds all three material errors and chooses a defensible verification level and reviewer. Asking the same model again is not treated as independent verification.\n\nDONE WHEN\nThe run sheet identifies the exact working page, demo, setup, practice instructions, expected answers, misconceptions, and exit check. All core activity fits the planned budget; prepared-output fallbacks are available.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Select the relevant demo and context card|Prepare instructions and expected answers|Budget setup and role changes explicitly|Keep five minutes unallocated|Check the fallback materials",
+    "Tags": "ai-course|instructor|preparation|session-04",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S04-REHEARSE",
+    "Task Name": "04 - Rehearse Session 4 in Google Meet",
+    "Description content": "Run a timed rehearsal through the actual Google Meet setup and the draft session page. Check website access, document links, quiz behavior, screen sharing, instructions, pairing or roles, transitions, practice, and submission. Simplify inputs or reduce whole-group reporting if planned activity exceeds 40 minutes; preserve practice and safety-critical feedback.\n\nPREREQUISITES\n- AI-S04-PREP\n- AI-S04-QUIZ06\n- AI-SETUP-WEBSITE-PUBLISH\n- AI-SETUP-MEET\n\nDONE WHEN\nActual activity duration, issues, and fixes are recorded. The session fits 40 planned minutes, the five-minute reserve remains unallocated, and the website and Google Meet path work end to end.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Join through the scheduled Google Meet event|Open the correct website session and working document|Test topic quizzes and fallbacks|Time all activities and transitions|Resolve overruns and unclear instructions|Record actual duration and fixes",
+    "Tags": "ai-course|instructor|rehearsal|session-04",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S04-RELEASE",
+    "Task Name": "05 - Publish the session materials and quizzes",
+    "Description content": "Review and publish Document 06 and their topic quizzes on the course website before Session 4. Direct learners to Document 06 as the working document. Test the Google Meet event route and explain that advance reading is optional.\n\nPREREQUISITES\n- AI-S04-REHEARSE\n- AI-SETUP-POLICY\n- AI-SETUP-SCHEDULE\n\nDONE WHEN\nThe reviewed handouts and quizzes are accessible on the correct session page, the working document is identified, group arrangements are ready, and no unsupported company or product claims remain.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Review the final handout and quiz versions|Publish them on the correct website session page|Identify the single working document|Test the Meet event route and fallback|Confirm group arrangements",
+    "Tags": "ai-course|instructor|release|session-04",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S04-DELIVER",
+    "Task Name": "06 - Deliver the 45-minute Google Meet session",
+    "Description content": "LEARNER OUTCOME\nA claim log that finds three material errors and explains the appropriate verification level.\n\nOpen the course website's Session 4 page and use Document 06 as the working document.\n\nAGENDA\nActivity clock: minutes:seconds from the start, excluding interruptions.\n00:00-03:00: Opening customer question and recap\n03:00-12:00: Essential concepts\n12:00-19:00: Worked example or demonstration\n19:00-21:00: Activity instructions and pairing\n21:00-34:00: Learner activity\n34:00-38:00: Discussion and feedback\n38:00-40:00: Exit check\nReserve: 5 minutes of contingency within the 45-minute slot. Activity offsets above exclude interruptions; use the reserve when needed. Do not fill unused reserve with additional required content.\n\nPREREQUISITES\n- AI-S04-RELEASE\n- AI-S03-DELIVER\n\nINSTRUCTOR NOTES\nWork question: “What needs checking before I share this answer with a customer?”\n\nOrganize the topic around the consequences of error: decide the verification effort first, then check the relevant claims. Cover hallucinations, names, dates, figures, quotations, citations, trusted current sources, and appropriate reviewers.\n\nUse a fictional recruiting-account handover brief prepared for a customer call. Supply a short context card explaining the work and intended audience, so the example makes sense before the later business-use-case session. Include three planted material errors and enough reference extracts to check them within the exercise time.\n\nProposed teaching ladder, subordinate to company policy:\n\nSituation: Low-consequence, reversible internal drafting; Verification approach: Read for relevance and errors; confirm any factual statements before reuse; Exercise example: Internal brainstorming notes using fictional information\nSituation: Customer-facing statements or operational commitments; Verification approach: Check material facts against trusted current records; resolve or remove unsupported claims before sharing; Exercise example: Candidate availability or a promised follow-up date\nSituation: Output affecting hiring, legal, financial, privacy, safety, or major reputational outcomes; Verification approach: Obtain appropriate qualified human review and required approvals; stop if evidence or authority is insufficient; Exercise example: An unsupported recommendation to reject a candidate\n\nClassify by intended use and consequence, not by how confident the AI sounds or which tool produced it. A draft can move into a higher tier when its audience or use changes. This ladder is a training aid, not a substitute for company policy or specialist judgment.\n\nReusable aid: A checklist ordered as intended use → consequence of error → review level → claims and evidence → unresolved items → decision to use, revise, or escalate. The log records the claim, risk tier and reason, source or reviewer, finding, and status.\n\nLive exercise: Assign a review level, find the errors, and identify unresolved claims. Then explain what changes if the brief is used for a hiring decision rather than an internal discussion. Supply an answer rationale tied to the evidence and proposed use.\n\nSuccess check: Finds all three material errors and chooses a defensible verification level and reviewer. Asking the same model again is not treated as independent verification.\n\nDONE WHEN\nThe live activity is complete within the slot, each learner has an opportunity to practice, the exit check is collected, and any unresolved questions are recorded.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Open the designated working page|Use the relevant customer context|Run the demonstration and learner practice|Correct material misconceptions|Collect the output and exit check|Record actual timing and unresolved questions",
+    "Tags": "ai-course|instructor|delivery|session-04",
+    "Time Estimate": "45 min"
+  },
+  {
+    "Task ID": "AI-S04-REVIEW",
+    "Task Name": "07 - Review learner work and quiz follow-up",
+    "Description content": "Review Session 4's output: A claim log that finds three material errors and explains the appropriate verification level. Use the handout answer key and the course feedback criteria. Review quiz results only if named tracking was approved; otherwise use anonymous questions and discussion patterns. Record attendance, missing work, common misconceptions, and targeted retries. Instructor review occurs outside the live learner slot.\n\nPREREQUISITES\n- AI-S04-DELIVER\n\nDONE WHEN\nOutputs have been reviewed; material accuracy or responsible-use errors receive corrective feedback; any retry, unanswered question, or material revision has an owner and next action.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Review the learner output against the criteria|Resolve or assign safety-critical corrections|Record missing work and targeted retries|Record improvements for the next delivery",
+    "Tags": "ai-course|instructor|learner-review|session-04",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S05",
+    "Task Name": "05 - Session 5: Protect data and keep AI use responsible",
+    "Description content": "LEARNER OUTCOME\nFour policy-grounded data decisions, an incident-response answer, and recognition of a biased assumption.\n\nLIVE SLOT: 45 minutes; 40 minutes of planned activity plus five minutes of contingency.\nSHARE: Document 07.\nWORKING DOCUMENT: Document 07.\nDELIVERY: Google Meet. MATERIALS: course website, with one quiz for each topic.\nAdvance reading is optional. Preparation, topic quizzes, and instructor follow-up are outside the learner's live slot.\nComplete preparation subtasks before teaching. Instructor tasks can be prepared ahead of the delivery sequence.\n\nDONE WHEN\nThe handouts and instructor notes are ready, the session has been delivered, and learner work has been reviewed with follow-up recorded.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "AI-S05-DOC07|AI-S05-QUIZ07|AI-S05-PREP|AI-S05-REHEARSE|AI-S05-RELEASE|AI-S05-DELIVER|AI-S05-REVIEW",
+    "Checklist": "",
+    "Tags": "ai-course|instructor|live-session|session-05",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S05-DOC07",
+    "Task Name": "01 - Prepare Document 07: Deciding what information can go into AI",
+    "Description content": "Work question: “Can I use this customer information in this tool?”\n\nCover approved tools and data categories, minimum necessary information, identifying details, access and retention, output storage, incident reporting, bias, copyright, and human accountability. Do not assume every approved tool permits every data type.\n\nLive versus reference coverage: Follow Session 5's explicit split. Keep permission decisions, bias recognition, human accountability, an incident response, and a brief content-reuse reminder in the live lesson. Put detailed access/retention tables, storage locations, licensing guidance, and full policy references in labeled appendices. Use one short biased candidate-summary example in the responsible-use demonstration and return to it during feedback.\n\nReusable aid: A policy-grounded decision guide and the actual company incident-reporting route.\n\nLive exercise: Classify four contrasting data examples and handle one accidental-disclosure scenario. Include credentials, fictional information, and private candidate or customer records. Provide explicit tool and policy context for each example.\n\nSuccess check: All designated critical decisions are correct. Removing names does not automatically make information safe to upload. Unclear permission requires checking the responsible policy or contact.\n\nDependency: Obtain actual company rules; do not invent approval categories or reporting contacts.\n\nPREREQUISITES\n- AI-MAT-CASE\n- AI-MAT-TEMPLATE\n- AI-SETUP-POLICY\n\nINSTRUCTOR NOTES\nPrepare one independent file for this topic. The instructor may delegate drafting, but must review it before teaching. This task creates the handout; the JSON import itself does not contain a finished learner document.\n\nDONE WHEN\nThe separately shareable handout contains an observable outcome, relevant teaching text, worked example, reusable aid, core exercise, three self-checks, and answer rationales. The teaching text targets 600-900 words; exercise assets and reference appendices are outside that count. References are checked and the final release copy has no unresolved placeholders.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Write the plain-language explanation and customer example|Build the reusable working aid|Add complete exercise assets in appendices|Write three self-checks and answer rationales|Check facts and applicable approved references|Label topic and session and working page",
+    "Tags": "ai-course|instructor|handout|topic-07|session-05",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S05-QUIZ07",
+    "Task Name": "02 - Create website quiz for Topic 07",
+    "Description content": "Create a three-to-five-question website quiz for Document 07: Deciding what information can go into AI. Test the topic's observable outcome with realistic customer or work decisions. Provide immediate answer feedback that explains why the answer is correct. Mark safety-critical questions where applicable. Use only the approved quiz-result model; do not collect learner identity or results unless tracking has been approved.\n\nPREREQUISITES\n- AI-S05-DOC07\n- AI-SETUP-WEBSITE-BUILD\n- AI-SETUP-WEBSITE-SCOPE\n\nDONE WHEN\nThe quiz is published on the correct topic section, works on desktop and mobile, gives clear answer feedback, and every answer matches the reviewed handout and applicable product or policy reference.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Write three to five relevant questions|Write clear feedback for every answer|Mark safety-critical questions where applicable|Check answers against the reviewed document|Test quiz behavior and accessibility",
+    "Tags": "ai-course|instructor|website-quiz|topic-07|session-05",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S05-PREP",
+    "Task Name": "03 - Prepare the demonstration and instructor run sheet",
+    "Description content": "Prepare the timed teaching sequence for Session 5.\n\nAGENDA\nActivity clock: minutes:seconds from the start, excluding interruptions.\n00:00-03:00: Opening customer-data scenario\n03:00-10:00: Data-use decisions: tool approval, allowed information, minimum input, and uncertainty\n10:00-16:00: Responsible-use example: unfair assumptions, human accountability, and content reuse\n16:00-20:00: Demonstrate the decision guide and incident-reporting route\n20:00-22:00: Exercise instructions and pairing\n22:00-34:00: Four data decisions plus one accidental-disclosure response\n34:00-38:00: Debrief: unsafe inputs, biased output, and the accountable reviewer\n38:00-40:00: Exit check\nReserve: 5 minutes of contingency within the 45-minute slot. Activity offsets above exclude interruptions; use the reserve when needed. Do not fill unused reserve with additional required content.\n\nPREREQUISITES\n- AI-S05-DOC07\n- AI-MAT-FACILITATOR\n- AI-MAT-FALLBACK\n- AI-MAT-ASSESSMENT\n\nINSTRUCTOR NOTES\nWork question: “Can I use this customer information in this tool?”\n\nCover approved tools and data categories, minimum necessary information, identifying details, access and retention, output storage, incident reporting, bias, copyright, and human accountability. Do not assume every approved tool permits every data type.\n\nLive versus reference coverage: Follow Session 5's explicit split. Keep permission decisions, bias recognition, human accountability, an incident response, and a brief content-reuse reminder in the live lesson. Put detailed access/retention tables, storage locations, licensing guidance, and full policy references in labeled appendices. Use one short biased candidate-summary example in the responsible-use demonstration and return to it during feedback.\n\nReusable aid: A policy-grounded decision guide and the actual company incident-reporting route.\n\nLive exercise: Classify four contrasting data examples and handle one accidental-disclosure scenario. Include credentials, fictional information, and private candidate or customer records. Provide explicit tool and policy context for each example.\n\nSuccess check: All designated critical decisions are correct. Removing names does not automatically make information safe to upload. Unclear permission requires checking the responsible policy or contact.\n\nDependency: Obtain actual company rules; do not invent approval categories or reporting contacts.\n\nTaught and practiced live: Determine whether the tool and data use are permitted; minimize inputs; stop when permission is unclear; recognize an unfair assumption in a fictional candidate summary; retain human responsibility for consequential decisions; follow the actual incident-reporting route. Include a brief content-reuse reminder: follow company ownership and licensing rules and escalate uncertainty.\n\nReference detail in Document 07: Tool-by-tool access and retention information, full data-category rules, approved output-storage locations, detailed anonymization examples, company copyright/licensing guidance, and reporting contacts. The live demonstration points learners to these sections. They are lookup material, not additional required pre-reading. Session 5 introduces bias recognition and accountability; it does not claim to teach a full fairness audit or legal assessment.\n\nDONE WHEN\nThe run sheet identifies the exact working page, demo, setup, practice instructions, expected answers, misconceptions, and exit check. All core activity fits the planned budget; prepared-output fallbacks are available.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Select the relevant demo and context card|Prepare instructions and expected answers|Budget setup and role changes explicitly|Keep five minutes unallocated|Check the fallback materials",
+    "Tags": "ai-course|instructor|preparation|session-05",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S05-REHEARSE",
+    "Task Name": "04 - Rehearse Session 5 in Google Meet",
+    "Description content": "Run a timed rehearsal through the actual Google Meet setup and the draft session page. Check website access, document links, quiz behavior, screen sharing, instructions, pairing or roles, transitions, practice, and submission. Simplify inputs or reduce whole-group reporting if planned activity exceeds 40 minutes; preserve practice and safety-critical feedback.\n\nPREREQUISITES\n- AI-S05-PREP\n- AI-S05-QUIZ07\n- AI-SETUP-WEBSITE-PUBLISH\n- AI-SETUP-MEET\n\nDONE WHEN\nActual activity duration, issues, and fixes are recorded. The session fits 40 planned minutes, the five-minute reserve remains unallocated, and the website and Google Meet path work end to end.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Join through the scheduled Google Meet event|Open the correct website session and working document|Test topic quizzes and fallbacks|Time all activities and transitions|Resolve overruns and unclear instructions|Record actual duration and fixes",
+    "Tags": "ai-course|instructor|rehearsal|session-05",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S05-RELEASE",
+    "Task Name": "05 - Publish the session materials and quizzes",
+    "Description content": "Review and publish Document 07 and their topic quizzes on the course website before Session 5. Direct learners to Document 07 as the working document. Test the Google Meet event route and explain that advance reading is optional.\n\nPREREQUISITES\n- AI-S05-REHEARSE\n- AI-SETUP-POLICY\n- AI-SETUP-SCHEDULE\n\nDONE WHEN\nThe reviewed handouts and quizzes are accessible on the correct session page, the working document is identified, group arrangements are ready, and no unsupported company or product claims remain.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Review the final handout and quiz versions|Publish them on the correct website session page|Identify the single working document|Test the Meet event route and fallback|Confirm group arrangements",
+    "Tags": "ai-course|instructor|release|session-05",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S05-DELIVER",
+    "Task Name": "06 - Deliver the 45-minute Google Meet session",
+    "Description content": "LEARNER OUTCOME\nFour policy-grounded data decisions, an incident-response answer, and recognition of a biased assumption.\n\nOpen the course website's Session 5 page and use Document 07 as the working document.\n\nAGENDA\nActivity clock: minutes:seconds from the start, excluding interruptions.\n00:00-03:00: Opening customer-data scenario\n03:00-10:00: Data-use decisions: tool approval, allowed information, minimum input, and uncertainty\n10:00-16:00: Responsible-use example: unfair assumptions, human accountability, and content reuse\n16:00-20:00: Demonstrate the decision guide and incident-reporting route\n20:00-22:00: Exercise instructions and pairing\n22:00-34:00: Four data decisions plus one accidental-disclosure response\n34:00-38:00: Debrief: unsafe inputs, biased output, and the accountable reviewer\n38:00-40:00: Exit check\nReserve: 5 minutes of contingency within the 45-minute slot. Activity offsets above exclude interruptions; use the reserve when needed. Do not fill unused reserve with additional required content.\n\nPREREQUISITES\n- AI-S05-RELEASE\n- AI-S04-DELIVER\n\nINSTRUCTOR NOTES\nWork question: “Can I use this customer information in this tool?”\n\nCover approved tools and data categories, minimum necessary information, identifying details, access and retention, output storage, incident reporting, bias, copyright, and human accountability. Do not assume every approved tool permits every data type.\n\nLive versus reference coverage: Follow Session 5's explicit split. Keep permission decisions, bias recognition, human accountability, an incident response, and a brief content-reuse reminder in the live lesson. Put detailed access/retention tables, storage locations, licensing guidance, and full policy references in labeled appendices. Use one short biased candidate-summary example in the responsible-use demonstration and return to it during feedback.\n\nReusable aid: A policy-grounded decision guide and the actual company incident-reporting route.\n\nLive exercise: Classify four contrasting data examples and handle one accidental-disclosure scenario. Include credentials, fictional information, and private candidate or customer records. Provide explicit tool and policy context for each example.\n\nSuccess check: All designated critical decisions are correct. Removing names does not automatically make information safe to upload. Unclear permission requires checking the responsible policy or contact.\n\nDependency: Obtain actual company rules; do not invent approval categories or reporting contacts.\n\nTaught and practiced live: Determine whether the tool and data use are permitted; minimize inputs; stop when permission is unclear; recognize an unfair assumption in a fictional candidate summary; retain human responsibility for consequential decisions; follow the actual incident-reporting route. Include a brief content-reuse reminder: follow company ownership and licensing rules and escalate uncertainty.\n\nReference detail in Document 07: Tool-by-tool access and retention information, full data-category rules, approved output-storage locations, detailed anonymization examples, company copyright/licensing guidance, and reporting contacts. The live demonstration points learners to these sections. They are lookup material, not additional required pre-reading. Session 5 introduces bias recognition and accountability; it does not claim to teach a full fairness audit or legal assessment.\n\nDONE WHEN\nThe live activity is complete within the slot, each learner has an opportunity to practice, the exit check is collected, and any unresolved questions are recorded.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Open the designated working page|Use the relevant customer context|Run the demonstration and learner practice|Correct material misconceptions|Collect the output and exit check|Record actual timing and unresolved questions",
+    "Tags": "ai-course|instructor|delivery|session-05",
+    "Time Estimate": "45 min"
+  },
+  {
+    "Task ID": "AI-S05-REVIEW",
+    "Task Name": "07 - Review learner work and quiz follow-up",
+    "Description content": "Review Session 5's output: Four policy-grounded data decisions, an incident-response answer, and recognition of a biased assumption. Use the handout answer key and the course feedback criteria. Review quiz results only if named tracking was approved; otherwise use anonymous questions and discussion patterns. Record attendance, missing work, common misconceptions, and targeted retries. Instructor review occurs outside the live learner slot.\n\nPREREQUISITES\n- AI-S05-DELIVER\n\nDONE WHEN\nOutputs have been reviewed; material accuracy or responsible-use errors receive corrective feedback; any retry, unanswered question, or material revision has an owner and next action.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Review the learner output against the criteria|Resolve or assign safety-critical corrections|Record missing work and targeted retries|Record improvements for the next delivery",
+    "Tags": "ai-course|instructor|learner-review|session-05",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S06",
+    "Task Name": "06 - Session 6: Select a use case and propose a workflow pilot",
+    "Description content": "LEARNER OUTCOME\nA one-page pilot brief identifying a useful task, allowed input, human review, and a measurable outcome.\n\nLIVE SLOT: 45 minutes; 40 minutes of planned activity plus five minutes of contingency.\nSHARE: Document 05, Document 08.\nWORKING DOCUMENT: Document 08.\nDELIVERY: Google Meet. MATERIALS: course website, with one quiz for each topic.\nAdvance reading is optional. Preparation, topic quizzes, and instructor follow-up are outside the learner's live slot.\nComplete preparation subtasks before teaching. Instructor tasks can be prepared ahead of the delivery sequence.\n\nDONE WHEN\nThe handouts and instructor notes are ready, the session has been delivered, and learner work has been reviewed with follow-up recorded.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "AI-S06-DOC05|AI-S06-QUIZ05|AI-S06-DOC08|AI-S06-QUIZ08|AI-S06-PREP|AI-S06-REHEARSE|AI-S06-RELEASE|AI-S06-DELIVER|AI-S06-REVIEW",
+    "Checklist": "",
+    "Tags": "ai-course|instructor|live-session|session-06",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S06-DOC05",
+    "Task Name": "01 - Prepare Document 05: Choosing useful AI applications at work",
+    "Description content": "Customer question: “Where could AI help us in our day-to-day work?”\n\nCover selected examples in support, sales preparation, recruiting administration, document review, and operations. Distinguish assistance, recommendations, and automated actions. Name each example's input, potential value, limitation, and human owner.\n\nReusable aid: Use-case cards: problem → AI task → proposed benefit → review point.\n\nLive exercise: Compare three supplied use cases and select one to take into Document 08's pilot template.\n\nBoundary: This document helps choose a task; Document 08 explains how to test it within a workflow. Document 05 can be completed and shared with generic business examples. Only optional Talent Genie examples require the approved product brief. During Session 6, use the three cards reproduced in Document 08 and retain Document 05 as the read-after reference.\n\nPREREQUISITES\n- AI-MAT-CASE\n- AI-MAT-TEMPLATE\n\nINSTRUCTOR NOTES\nPrepare one independent file for this topic. The instructor may delegate drafting, but must review it before teaching. This task creates the handout; the JSON import itself does not contain a finished learner document.\n\nDONE WHEN\nThe separately shareable handout contains an observable outcome, relevant teaching text, worked example, reusable aid, core exercise, three self-checks, and answer rationales. The teaching text targets 600-900 words; exercise assets and reference appendices are outside that count. References are checked and the final release copy has no unresolved placeholders.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Write the plain-language explanation and customer example|Build the reusable working aid|Add complete exercise assets in appendices|Write three self-checks and answer rationales|Check facts and applicable approved references|Label topic and session and working page",
+    "Tags": "ai-course|instructor|handout|topic-05|session-06",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S06-QUIZ05",
+    "Task Name": "02 - Create website quiz for Topic 05",
+    "Description content": "Create a three-to-five-question website quiz for Document 05: Choosing useful AI applications at work. Test the topic's observable outcome with realistic customer or work decisions. Provide immediate answer feedback that explains why the answer is correct. Mark safety-critical questions where applicable. Use only the approved quiz-result model; do not collect learner identity or results unless tracking has been approved.\n\nPREREQUISITES\n- AI-S06-DOC05\n- AI-SETUP-WEBSITE-BUILD\n- AI-SETUP-WEBSITE-SCOPE\n\nDONE WHEN\nThe quiz is published on the correct topic section, works on desktop and mobile, gives clear answer feedback, and every answer matches the reviewed handout and applicable product or policy reference.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Write three to five relevant questions|Write clear feedback for every answer|Mark safety-critical questions where applicable|Check answers against the reviewed document|Test quiz behavior and accessibility",
+    "Tags": "ai-course|instructor|website-quiz|topic-05|session-06",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S06-DOC08",
+    "Task Name": "03 - Prepare Document 08: Planning one useful AI workflow pilot",
+    "Description content": "Customer question: “Where should we start, and how would we know it helped?”\n\nCover process steps, bottlenecks, task selection, inputs, permissions, integrations, review points, and success measures. Include a completed fictional example that keeps hiring decisions with accountable people.\n\nReusable aid: A one-page pilot brief: problem, selected step, proposed assistance, allowed input, reviewer, baseline, proposed target, owner, and stop condition.\n\nLive exercise: Complete a partly filled brief using the supplied workflow and three use-case cards reproduced from Document 05. Apply the accuracy and data-use guides. Document 08 is the sole working document in Session 6.\n\nScope: Evaluate and improve a supplied workflow. Independent workflow mapping is not an assessed course outcome; offer it only as an explicitly separate extension.\n\nSuccess check: Names a specific task, appropriate controls, and a measurable outcome. Fictional baseline figures and proposed targets are clearly labeled.\n\nPREREQUISITES\n- AI-MAT-CASE\n- AI-MAT-TEMPLATE\n\nINSTRUCTOR NOTES\nPrepare one independent file for this topic. The instructor may delegate drafting, but must review it before teaching. This task creates the handout; the JSON import itself does not contain a finished learner document.\n\nDONE WHEN\nThe separately shareable handout contains an observable outcome, relevant teaching text, worked example, reusable aid, core exercise, three self-checks, and answer rationales. The teaching text targets 600-900 words; exercise assets and reference appendices are outside that count. References are checked and the final release copy has no unresolved placeholders.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Write the plain-language explanation and customer example|Build the reusable working aid|Add complete exercise assets in appendices|Write three self-checks and answer rationales|Check facts and applicable approved references|Label topic and session and working page",
+    "Tags": "ai-course|instructor|handout|topic-08|session-06",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S06-QUIZ08",
+    "Task Name": "04 - Create website quiz for Topic 08",
+    "Description content": "Create a three-to-five-question website quiz for Document 08: Planning one useful AI workflow pilot. Test the topic's observable outcome with realistic customer or work decisions. Provide immediate answer feedback that explains why the answer is correct. Mark safety-critical questions where applicable. Use only the approved quiz-result model; do not collect learner identity or results unless tracking has been approved.\n\nPREREQUISITES\n- AI-S06-DOC08\n- AI-SETUP-WEBSITE-BUILD\n- AI-SETUP-WEBSITE-SCOPE\n\nDONE WHEN\nThe quiz is published on the correct topic section, works on desktop and mobile, gives clear answer feedback, and every answer matches the reviewed handout and applicable product or policy reference.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Write three to five relevant questions|Write clear feedback for every answer|Mark safety-critical questions where applicable|Check answers against the reviewed document|Test quiz behavior and accessibility",
+    "Tags": "ai-course|instructor|website-quiz|topic-08|session-06",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S06-PREP",
+    "Task Name": "05 - Prepare the demonstration and instructor run sheet",
+    "Description content": "Prepare the timed teaching sequence for Session 6.\n\nAGENDA\nActivity clock: minutes:seconds from the start, excluding interruptions.\n00:00-03:00: Recap accuracy and data-use checks\n03:00-10:00: Compare useful business applications\n10:00-18:00: Demonstrate choosing one opportunity in a supplied workflow\n18:00-20:00: Explain the working page and form pairs\n20:00-33:00: Complete a partly filled pilot proposal\n33:00-38:00: Review proposals and check understanding\n38:00-40:00: Exit check\nReserve: 5 minutes of contingency within the 45-minute slot. Activity offsets above exclude interruptions; use the reserve when needed. Do not fill unused reserve with additional required content.\n\nPREREQUISITES\n- AI-S06-DOC05\n- AI-S06-DOC08\n- AI-MAT-FACILITATOR\n- AI-MAT-FALLBACK\n- AI-MAT-ASSESSMENT\n\nINSTRUCTOR NOTES\nCustomer question: “Where could AI help us in our day-to-day work?”\n\nCover selected examples in support, sales preparation, recruiting administration, document review, and operations. Distinguish assistance, recommendations, and automated actions. Name each example's input, potential value, limitation, and human owner.\n\nReusable aid: Use-case cards: problem → AI task → proposed benefit → review point.\n\nLive exercise: Compare three supplied use cases and select one to take into Document 08's pilot template.\n\nBoundary: This document helps choose a task; Document 08 explains how to test it within a workflow. Document 05 can be completed and shared with generic business examples. Only optional Talent Genie examples require the approved product brief. During Session 6, use the three cards reproduced in Document 08 and retain Document 05 as the read-after reference.\n\nCustomer question: “Where should we start, and how would we know it helped?”\n\nCover process steps, bottlenecks, task selection, inputs, permissions, integrations, review points, and success measures. Include a completed fictional example that keeps hiring decisions with accountable people.\n\nReusable aid: A one-page pilot brief: problem, selected step, proposed assistance, allowed input, reviewer, baseline, proposed target, owner, and stop condition.\n\nLive exercise: Complete a partly filled brief using the supplied workflow and three use-case cards reproduced from Document 05. Apply the accuracy and data-use guides. Document 08 is the sole working document in Session 6.\n\nScope: Evaluate and improve a supplied workflow. Independent workflow mapping is not an assessed course outcome; offer it only as an explicitly separate extension.\n\nSuccess check: Names a specific task, appropriate controls, and a measurable outcome. Fictional baseline figures and proposed targets are clearly labeled.\n\nSupply a prepared workflow and three candidate use cases in Document 08. Learners select one and complete the missing proposal fields.\n\nExplicit scope reduction from the source: Learners evaluate and improve a supplied workflow. This course does not establish that they can independently discover and map an unfamiliar workflow from scratch. That source skill requires an optional follow-up workshop or coached workplace exercise outside these six hours.\n\nDONE WHEN\nThe run sheet identifies the exact working page, demo, setup, practice instructions, expected answers, misconceptions, and exit check. All core activity fits the planned budget; prepared-output fallbacks are available.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Select the relevant demo and context card|Prepare instructions and expected answers|Budget setup and role changes explicitly|Keep five minutes unallocated|Check the fallback materials",
+    "Tags": "ai-course|instructor|preparation|session-06",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S06-REHEARSE",
+    "Task Name": "06 - Rehearse Session 6 in Google Meet",
+    "Description content": "Run a timed rehearsal through the actual Google Meet setup and the draft session page. Check website access, document links, quiz behavior, screen sharing, instructions, pairing or roles, transitions, practice, and submission. Simplify inputs or reduce whole-group reporting if planned activity exceeds 40 minutes; preserve practice and safety-critical feedback.\n\nPREREQUISITES\n- AI-S06-PREP\n- AI-S06-QUIZ05\n- AI-S06-QUIZ08\n- AI-SETUP-WEBSITE-PUBLISH\n- AI-SETUP-MEET\n\nDONE WHEN\nActual activity duration, issues, and fixes are recorded. The session fits 40 planned minutes, the five-minute reserve remains unallocated, and the website and Google Meet path work end to end.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Join through the scheduled Google Meet event|Open the correct website session and working document|Test topic quizzes and fallbacks|Time all activities and transitions|Resolve overruns and unclear instructions|Record actual duration and fixes",
+    "Tags": "ai-course|instructor|rehearsal|session-06",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S06-RELEASE",
+    "Task Name": "07 - Publish the session materials and quizzes",
+    "Description content": "Review and publish Document 05, Document 08 and their topic quizzes on the course website before Session 6. Direct learners to Document 08 as the working document. Test the Google Meet event route and explain that advance reading is optional.\n\nPREREQUISITES\n- AI-S06-REHEARSE\n- AI-SETUP-POLICY\n- AI-SETUP-SCHEDULE\n\nDONE WHEN\nThe reviewed handouts and quizzes are accessible on the correct session page, the working document is identified, group arrangements are ready, and no unsupported company or product claims remain.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Review the final handout and quiz versions|Publish them on the correct website session page|Identify the single working document|Test the Meet event route and fallback|Confirm group arrangements",
+    "Tags": "ai-course|instructor|release|session-06",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S06-DELIVER",
+    "Task Name": "08 - Deliver the 45-minute Google Meet session",
+    "Description content": "LEARNER OUTCOME\nA one-page pilot brief identifying a useful task, allowed input, human review, and a measurable outcome.\n\nOpen the course website's Session 6 page and use Document 08 as the working document.\n\nAGENDA\nActivity clock: minutes:seconds from the start, excluding interruptions.\n00:00-03:00: Recap accuracy and data-use checks\n03:00-10:00: Compare useful business applications\n10:00-18:00: Demonstrate choosing one opportunity in a supplied workflow\n18:00-20:00: Explain the working page and form pairs\n20:00-33:00: Complete a partly filled pilot proposal\n33:00-38:00: Review proposals and check understanding\n38:00-40:00: Exit check\nReserve: 5 minutes of contingency within the 45-minute slot. Activity offsets above exclude interruptions; use the reserve when needed. Do not fill unused reserve with additional required content.\n\nPREREQUISITES\n- AI-S06-RELEASE\n- AI-S05-DELIVER\n\nINSTRUCTOR NOTES\nCustomer question: “Where could AI help us in our day-to-day work?”\n\nCover selected examples in support, sales preparation, recruiting administration, document review, and operations. Distinguish assistance, recommendations, and automated actions. Name each example's input, potential value, limitation, and human owner.\n\nReusable aid: Use-case cards: problem → AI task → proposed benefit → review point.\n\nLive exercise: Compare three supplied use cases and select one to take into Document 08's pilot template.\n\nBoundary: This document helps choose a task; Document 08 explains how to test it within a workflow. Document 05 can be completed and shared with generic business examples. Only optional Talent Genie examples require the approved product brief. During Session 6, use the three cards reproduced in Document 08 and retain Document 05 as the read-after reference.\n\nCustomer question: “Where should we start, and how would we know it helped?”\n\nCover process steps, bottlenecks, task selection, inputs, permissions, integrations, review points, and success measures. Include a completed fictional example that keeps hiring decisions with accountable people.\n\nReusable aid: A one-page pilot brief: problem, selected step, proposed assistance, allowed input, reviewer, baseline, proposed target, owner, and stop condition.\n\nLive exercise: Complete a partly filled brief using the supplied workflow and three use-case cards reproduced from Document 05. Apply the accuracy and data-use guides. Document 08 is the sole working document in Session 6.\n\nScope: Evaluate and improve a supplied workflow. Independent workflow mapping is not an assessed course outcome; offer it only as an explicitly separate extension.\n\nSuccess check: Names a specific task, appropriate controls, and a measurable outcome. Fictional baseline figures and proposed targets are clearly labeled.\n\nSupply a prepared workflow and three candidate use cases in Document 08. Learners select one and complete the missing proposal fields.\n\nExplicit scope reduction from the source: Learners evaluate and improve a supplied workflow. This course does not establish that they can independently discover and map an unfamiliar workflow from scratch. That source skill requires an optional follow-up workshop or coached workplace exercise outside these six hours.\n\nDONE WHEN\nThe live activity is complete within the slot, each learner has an opportunity to practice, the exit check is collected, and any unresolved questions are recorded.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Open the designated working page|Use the relevant customer context|Run the demonstration and learner practice|Correct material misconceptions|Collect the output and exit check|Record actual timing and unresolved questions",
+    "Tags": "ai-course|instructor|delivery|session-06",
+    "Time Estimate": "45 min"
+  },
+  {
+    "Task ID": "AI-S06-REVIEW",
+    "Task Name": "09 - Review learner work and quiz follow-up",
+    "Description content": "Review Session 6's output: A one-page pilot brief identifying a useful task, allowed input, human review, and a measurable outcome. Use the handout answer key and the course feedback criteria. Review quiz results only if named tracking was approved; otherwise use anonymous questions and discussion patterns. Record attendance, missing work, common misconceptions, and targeted retries. Instructor review occurs outside the live learner slot.\n\nPREREQUISITES\n- AI-S06-DELIVER\n\nDONE WHEN\nOutputs have been reviewed; material accuracy or responsible-use errors receive corrective feedback; any retry, unanswered question, or material revision has an owner and next action.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Review the learner output against the criteria|Resolve or assign safety-critical corrections|Record missing work and targeted retries|Record improvements for the next delivery",
+    "Tags": "ai-course|instructor|learner-review|session-06",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S07",
+    "Task Name": "07 - Session 7: Discover the customer's actual problem",
+    "Description content": "LEARNER OUTCOME\nDiscovery notes, a confirmed problem statement, and a desired outcome before a solution is proposed.\n\nLIVE SLOT: 45 minutes; 40 minutes of planned activity plus five minutes of contingency.\nSHARE: Document 09.\nWORKING DOCUMENT: Document 09.\nDELIVERY: Google Meet. MATERIALS: course website, with one quiz for each topic.\nAdvance reading is optional. Preparation, topic quizzes, and instructor follow-up are outside the learner's live slot.\nComplete preparation subtasks before teaching. Instructor tasks can be prepared ahead of the delivery sequence.\n\nDONE WHEN\nThe handouts and instructor notes are ready, the session has been delivered, and learner work has been reviewed with follow-up recorded.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "AI-S07-DOC09|AI-S07-QUIZ09|AI-S07-PREP|AI-S07-REHEARSE|AI-S07-RELEASE|AI-S07-DELIVER|AI-S07-REVIEW",
+    "Checklist": "",
+    "Tags": "ai-course|instructor|live-session|session-07",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S07-DOC09",
+    "Task Name": "01 - Prepare Document 09: Running a useful customer discovery conversation",
+    "Description content": "Work question: “What should we understand before recommending AI?”\n\nCover current process, pain, frequency, impact, urgency, desired outcome, data readiness, decision-makers, timing, and constraints. Include a short annotated discovery exchange.\n\nReusable aid: A question guide and a one-sentence problem-statement template.\n\nLive exercise: Within the 13-minute practice block, run two five-minute paired conversations, allow one minute to switch roles, then spend two minutes comparing notes. Pair setup and instructions have their own two-minute agenda block. Confirm the problem and desired outcome before discussing a solution.\n\nSuccess check: Explores process and impact, acknowledges constraints, and checks understanding with the customer.\n\nPREREQUISITES\n- AI-MAT-CASE\n- AI-MAT-TEMPLATE\n\nINSTRUCTOR NOTES\nPrepare one independent file for this topic. The instructor may delegate drafting, but must review it before teaching. This task creates the handout; the JSON import itself does not contain a finished learner document.\n\nDONE WHEN\nThe separately shareable handout contains an observable outcome, relevant teaching text, worked example, reusable aid, core exercise, three self-checks, and answer rationales. The teaching text targets 600-900 words; exercise assets and reference appendices are outside that count. References are checked and the final release copy has no unresolved placeholders.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Write the plain-language explanation and customer example|Build the reusable working aid|Add complete exercise assets in appendices|Write three self-checks and answer rationales|Check facts and applicable approved references|Label topic and session and working page",
+    "Tags": "ai-course|instructor|handout|topic-09|session-07",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S07-QUIZ09",
+    "Task Name": "02 - Create website quiz for Topic 09",
+    "Description content": "Create a three-to-five-question website quiz for Document 09: Running a useful customer discovery conversation. Test the topic's observable outcome with realistic customer or work decisions. Provide immediate answer feedback that explains why the answer is correct. Mark safety-critical questions where applicable. Use only the approved quiz-result model; do not collect learner identity or results unless tracking has been approved.\n\nPREREQUISITES\n- AI-S07-DOC09\n- AI-SETUP-WEBSITE-BUILD\n- AI-SETUP-WEBSITE-SCOPE\n\nDONE WHEN\nThe quiz is published on the correct topic section, works on desktop and mobile, gives clear answer feedback, and every answer matches the reviewed handout and applicable product or policy reference.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Write three to five relevant questions|Write clear feedback for every answer|Mark safety-critical questions where applicable|Check answers against the reviewed document|Test quiz behavior and accessibility",
+    "Tags": "ai-course|instructor|website-quiz|topic-09|session-07",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S07-PREP",
+    "Task Name": "03 - Prepare the demonstration and instructor run sheet",
+    "Description content": "Prepare the timed teaching sequence for Session 7.\n\nAGENDA\nActivity clock: minutes:seconds from the start, excluding interruptions.\n00:00-03:00: Opening customer question and recap\n03:00-12:00: Essential concepts\n12:00-19:00: Worked example or demonstration\n19:00-21:00: Activity instructions and pairing\n21:00-34:00: Learner activity\n34:00-38:00: Discussion and feedback\n38:00-40:00: Exit check\nReserve: 5 minutes of contingency within the 45-minute slot. Activity offsets above exclude interruptions; use the reserve when needed. Do not fill unused reserve with additional required content.\n\nPREREQUISITES\n- AI-S07-DOC09\n- AI-MAT-FACILITATOR\n- AI-MAT-FALLBACK\n- AI-MAT-ASSESSMENT\n\nINSTRUCTOR NOTES\nWork question: “What should we understand before recommending AI?”\n\nCover current process, pain, frequency, impact, urgency, desired outcome, data readiness, decision-makers, timing, and constraints. Include a short annotated discovery exchange.\n\nReusable aid: A question guide and a one-sentence problem-statement template.\n\nLive exercise: Within the 13-minute practice block, run two five-minute paired conversations, allow one minute to switch roles, then spend two minutes comparing notes. Pair setup and instructions have their own two-minute agenda block. Confirm the problem and desired outcome before discussing a solution.\n\nSuccess check: Explores process and impact, acknowledges constraints, and checks understanding with the customer.\n\nDONE WHEN\nThe run sheet identifies the exact working page, demo, setup, practice instructions, expected answers, misconceptions, and exit check. All core activity fits the planned budget; prepared-output fallbacks are available.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Select the relevant demo and context card|Prepare instructions and expected answers|Budget setup and role changes explicitly|Keep five minutes unallocated|Check the fallback materials",
+    "Tags": "ai-course|instructor|preparation|session-07",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S07-REHEARSE",
+    "Task Name": "04 - Rehearse Session 7 in Google Meet",
+    "Description content": "Run a timed rehearsal through the actual Google Meet setup and the draft session page. Check website access, document links, quiz behavior, screen sharing, instructions, pairing or roles, transitions, practice, and submission. Simplify inputs or reduce whole-group reporting if planned activity exceeds 40 minutes; preserve practice and safety-critical feedback.\n\nPREREQUISITES\n- AI-S07-PREP\n- AI-S07-QUIZ09\n- AI-SETUP-WEBSITE-PUBLISH\n- AI-SETUP-MEET\n\nDONE WHEN\nActual activity duration, issues, and fixes are recorded. The session fits 40 planned minutes, the five-minute reserve remains unallocated, and the website and Google Meet path work end to end.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Join through the scheduled Google Meet event|Open the correct website session and working document|Test topic quizzes and fallbacks|Time all activities and transitions|Resolve overruns and unclear instructions|Record actual duration and fixes",
+    "Tags": "ai-course|instructor|rehearsal|session-07",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S07-RELEASE",
+    "Task Name": "05 - Publish the session materials and quizzes",
+    "Description content": "Review and publish Document 09 and their topic quizzes on the course website before Session 7. Direct learners to Document 09 as the working document. Test the Google Meet event route and explain that advance reading is optional.\n\nPREREQUISITES\n- AI-S07-REHEARSE\n- AI-SETUP-POLICY\n- AI-SETUP-SCHEDULE\n\nDONE WHEN\nThe reviewed handouts and quizzes are accessible on the correct session page, the working document is identified, group arrangements are ready, and no unsupported company or product claims remain.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Review the final handout and quiz versions|Publish them on the correct website session page|Identify the single working document|Test the Meet event route and fallback|Confirm group arrangements",
+    "Tags": "ai-course|instructor|release|session-07",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S07-DELIVER",
+    "Task Name": "06 - Deliver the 45-minute Google Meet session",
+    "Description content": "LEARNER OUTCOME\nDiscovery notes, a confirmed problem statement, and a desired outcome before a solution is proposed.\n\nOpen the course website's Session 7 page and use Document 09 as the working document.\n\nAGENDA\nActivity clock: minutes:seconds from the start, excluding interruptions.\n00:00-03:00: Opening customer question and recap\n03:00-12:00: Essential concepts\n12:00-19:00: Worked example or demonstration\n19:00-21:00: Activity instructions and pairing\n21:00-34:00: Learner activity\n34:00-38:00: Discussion and feedback\n38:00-40:00: Exit check\nReserve: 5 minutes of contingency within the 45-minute slot. Activity offsets above exclude interruptions; use the reserve when needed. Do not fill unused reserve with additional required content.\n\nPREREQUISITES\n- AI-S07-RELEASE\n- AI-S06-DELIVER\n\nINSTRUCTOR NOTES\nWork question: “What should we understand before recommending AI?”\n\nCover current process, pain, frequency, impact, urgency, desired outcome, data readiness, decision-makers, timing, and constraints. Include a short annotated discovery exchange.\n\nReusable aid: A question guide and a one-sentence problem-statement template.\n\nLive exercise: Within the 13-minute practice block, run two five-minute paired conversations, allow one minute to switch roles, then spend two minutes comparing notes. Pair setup and instructions have their own two-minute agenda block. Confirm the problem and desired outcome before discussing a solution.\n\nSuccess check: Explores process and impact, acknowledges constraints, and checks understanding with the customer.\n\nDONE WHEN\nThe live activity is complete within the slot, each learner has an opportunity to practice, the exit check is collected, and any unresolved questions are recorded.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Open the designated working page|Use the relevant customer context|Run the demonstration and learner practice|Correct material misconceptions|Collect the output and exit check|Record actual timing and unresolved questions",
+    "Tags": "ai-course|instructor|delivery|session-07",
+    "Time Estimate": "45 min"
+  },
+  {
+    "Task ID": "AI-S07-REVIEW",
+    "Task Name": "07 - Review learner work and quiz follow-up",
+    "Description content": "Review Session 7's output: Discovery notes, a confirmed problem statement, and a desired outcome before a solution is proposed. Use the handout answer key and the course feedback criteria. Review quiz results only if named tracking was approved; otherwise use anonymous questions and discussion patterns. Record attendance, missing work, common misconceptions, and targeted retries. Instructor review occurs outside the live learner slot.\n\nPREREQUISITES\n- AI-S07-DELIVER\n\nDONE WHEN\nOutputs have been reviewed; material accuracy or responsible-use errors receive corrective feedback; any retry, unanswered question, or material revision has an owner and next action.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Review the learner output against the criteria|Resolve or assign safety-critical corrections|Record missing work and targeted retries|Record improvements for the next delivery",
+    "Tags": "ai-course|instructor|learner-review|session-07",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S08",
+    "Task Name": "08 - Session 8: Explain Talent Genie and agree on a next step",
+    "Description content": "LEARNER OUTCOME\nThree adapted audience-specific talk tracks, one performed customer role-play, and a short knowledge check.\n\nLIVE SLOT: 45 minutes; 40 minutes of planned activity plus five minutes of contingency.\nSHARE: Document 10.\nWORKING DOCUMENT: Document 10.\nDELIVERY: Google Meet. MATERIALS: course website, with one quiz for each topic.\nAdvance reading is optional. Preparation, topic quizzes, and instructor follow-up are outside the learner's live slot.\nComplete preparation subtasks before teaching. Instructor tasks can be prepared ahead of the delivery sequence.\n\nDONE WHEN\nThe handouts and instructor notes are ready, the session has been delivered, and learner work has been reviewed with follow-up recorded.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "AI-S08-DOC10|AI-S08-QUIZ10|AI-S08-PREP|AI-S08-REHEARSE|AI-S08-RELEASE|AI-S08-DELIVER|AI-S08-REVIEW",
+    "Checklist": "",
+    "Tags": "ai-course|instructor|live-session|session-08",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S08-DOC10",
+    "Task Name": "01 - Prepare Document 10: Explaining Talent Genie and agreeing on the next step",
+    "Description content": "Customer question: “How does Talent Genie help someone in my role, and what happens next?”\n\nCover approved capabilities, relevant outcomes, limitations, data and implementation needs, human oversight, and next steps. Provide examples for a recruiter, operations leader, and executive.\n\nReusable aid: Three adaptable talk tracks and an objection-response guide. Use customer problem → supported capability → relevant outcome → limitation or review need → next step.\n\nLive exercise: Adapt the three templates and use one in the final role-play. Keep each explanation under 90 seconds.\n\nSuccess check: Fits the audience, uses verified facts, avoids guarantees, and ends with a concrete action.\n\nDependency: The source names Talent Genie but does not describe its features. Obtain the approved product brief before completing or sharing this handout. Generic AI examples cannot establish product knowledge.\n\nPREREQUISITES\n- AI-MAT-CASE\n- AI-MAT-TEMPLATE\n- AI-SETUP-PRODUCT\n\nINSTRUCTOR NOTES\nPrepare one independent file for this topic. The instructor may delegate drafting, but must review it before teaching. This task creates the handout; the JSON import itself does not contain a finished learner document.\n\nDONE WHEN\nThe separately shareable handout contains an observable outcome, relevant teaching text, worked example, reusable aid, core exercise, three self-checks, and answer rationales. The teaching text targets 600-900 words; exercise assets and reference appendices are outside that count. References are checked and the final release copy has no unresolved placeholders.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Write the plain-language explanation and customer example|Build the reusable working aid|Add complete exercise assets in appendices|Write three self-checks and answer rationales|Check facts and applicable approved references|Label topic and session and working page",
+    "Tags": "ai-course|instructor|handout|topic-10|session-08",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S08-QUIZ10",
+    "Task Name": "02 - Create website quiz for Topic 10",
+    "Description content": "Create a three-to-five-question website quiz for Document 10: Explaining Talent Genie and agreeing on the next step. Test the topic's observable outcome with realistic customer or work decisions. Provide immediate answer feedback that explains why the answer is correct. Mark safety-critical questions where applicable. Use only the approved quiz-result model; do not collect learner identity or results unless tracking has been approved.\n\nPREREQUISITES\n- AI-S08-DOC10\n- AI-SETUP-WEBSITE-BUILD\n- AI-SETUP-WEBSITE-SCOPE\n\nDONE WHEN\nThe quiz is published on the correct topic section, works on desktop and mobile, gives clear answer feedback, and every answer matches the reviewed handout and applicable product or policy reference.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Write three to five relevant questions|Write clear feedback for every answer|Mark safety-critical questions where applicable|Check answers against the reviewed document|Test quiz behavior and accessibility",
+    "Tags": "ai-course|instructor|website-quiz|topic-10|session-08",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S08-PREP",
+    "Task Name": "03 - Prepare the demonstration and instructor run sheet",
+    "Description content": "Prepare the timed teaching sequence for Session 8.\n\nAGENDA\nActivity clock: minutes:seconds from the start, excluding interruptions.\n00:00-04:00: Refresh approved product facts and conversation criteria\n04:00-08:00: Demonstrate an explanation and objection response\n08:00-14:00: Adapt three short talk-track templates\n14:00-17:00: Assign groups and explain roles, timing, and the rubric\n17:00-23:00: Role-play round 1\n23:00-23:30: Rotate employee, customer, and observer roles\n23:30-29:30: Role-play round 2\n29:30-30:00: Rotate employee, customer, and observer roles\n30:00-36:00: Role-play round 3\n36:00-40:00: Final knowledge check and submission\nReserve: 5 minutes of contingency within the 45-minute slot. Activity offsets above exclude interruptions; use the reserve when needed. Do not fill unused reserve with additional required content.\n\nPREREQUISITES\n- AI-S08-DOC10\n- AI-MAT-FACILITATOR\n- AI-MAT-FALLBACK\n- AI-MAT-ASSESSMENT\n\nINSTRUCTOR NOTES\nCustomer question: “How does Talent Genie help someone in my role, and what happens next?”\n\nCover approved capabilities, relevant outcomes, limitations, data and implementation needs, human oversight, and next steps. Provide examples for a recruiter, operations leader, and executive.\n\nReusable aid: Three adaptable talk tracks and an objection-response guide. Use customer problem → supported capability → relevant outcome → limitation or review need → next step.\n\nLive exercise: Adapt the three templates and use one in the final role-play. Keep each explanation under 90 seconds.\n\nSuccess check: Fits the audience, uses verified facts, avoids guarantees, and ends with a concrete action.\n\nDependency: The source names Talent Genie but does not describe its features. Obtain the approved product brief before completing or sharing this handout. Generic AI examples cannot establish product knowledge.\n\nEach six-minute round includes 90 seconds to confirm the supplied customer problem, 90 seconds of explanation, one minute for an objection and next step, and two minutes of observer feedback. Rotate employee, customer, and observer roles so each learner practices as the employee. Preassign groups before the session. For a remainder of two, use a pair with facilitator observation; for a remainder of one, add a facilitator or coach to make a workable group. Confirm staffing before delivery rather than squeezing four learner turns into three rounds.\n\nLearners adapt three short, partly completed templates for a recruiter, operations leader, and executive, and deliver one in the role-play. Session 7 provides longer discovery practice; this final exercise checks problem confirmation, not a complete new discovery interview. This session is an applied learning check. Formal individual certification, if required, needs assessor coverage or separately scheduled assessment time; peer feedback alone does not establish readiness for customer work.\n\nDONE WHEN\nThe run sheet identifies the exact working page, demo, setup, practice instructions, expected answers, misconceptions, and exit check. All core activity fits the planned budget; prepared-output fallbacks are available.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Select the relevant demo and context card|Prepare instructions and expected answers|Budget setup and role changes explicitly|Keep five minutes unallocated|Check the fallback materials",
+    "Tags": "ai-course|instructor|preparation|session-08",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S08-REHEARSE",
+    "Task Name": "04 - Rehearse Session 8 in Google Meet",
+    "Description content": "Run a timed rehearsal through the actual Google Meet setup and the draft session page. Check website access, document links, quiz behavior, screen sharing, instructions, pairing or roles, transitions, practice, and submission. Simplify inputs or reduce whole-group reporting if planned activity exceeds 40 minutes; preserve practice and safety-critical feedback.\n\nPREREQUISITES\n- AI-S08-PREP\n- AI-S08-QUIZ10\n- AI-SETUP-WEBSITE-PUBLISH\n- AI-SETUP-MEET\n\nDONE WHEN\nActual activity duration, issues, and fixes are recorded. The session fits 40 planned minutes, the five-minute reserve remains unallocated, and the website and Google Meet path work end to end.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Join through the scheduled Google Meet event|Open the correct website session and working document|Test topic quizzes and fallbacks|Time all activities and transitions|Resolve overruns and unclear instructions|Record actual duration and fixes",
+    "Tags": "ai-course|instructor|rehearsal|session-08",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S08-RELEASE",
+    "Task Name": "05 - Publish the session materials and quizzes",
+    "Description content": "Review and publish Document 10 and their topic quizzes on the course website before Session 8. Direct learners to Document 10 as the working document. Test the Google Meet event route and explain that advance reading is optional.\n\nPREREQUISITES\n- AI-S08-REHEARSE\n- AI-SETUP-POLICY\n- AI-SETUP-SCHEDULE\n\nDONE WHEN\nThe reviewed handouts and quizzes are accessible on the correct session page, the working document is identified, group arrangements are ready, and no unsupported company or product claims remain.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Review the final handout and quiz versions|Publish them on the correct website session page|Identify the single working document|Test the Meet event route and fallback|Confirm group arrangements",
+    "Tags": "ai-course|instructor|release|session-08",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-S08-DELIVER",
+    "Task Name": "06 - Deliver the 45-minute Google Meet session",
+    "Description content": "LEARNER OUTCOME\nThree adapted audience-specific talk tracks, one performed customer role-play, and a short knowledge check.\n\nOpen the course website's Session 8 page and use Document 10 as the working document.\n\nAGENDA\nActivity clock: minutes:seconds from the start, excluding interruptions.\n00:00-04:00: Refresh approved product facts and conversation criteria\n04:00-08:00: Demonstrate an explanation and objection response\n08:00-14:00: Adapt three short talk-track templates\n14:00-17:00: Assign groups and explain roles, timing, and the rubric\n17:00-23:00: Role-play round 1\n23:00-23:30: Rotate employee, customer, and observer roles\n23:30-29:30: Role-play round 2\n29:30-30:00: Rotate employee, customer, and observer roles\n30:00-36:00: Role-play round 3\n36:00-40:00: Final knowledge check and submission\nReserve: 5 minutes of contingency within the 45-minute slot. Activity offsets above exclude interruptions; use the reserve when needed. Do not fill unused reserve with additional required content.\n\nPREREQUISITES\n- AI-S08-RELEASE\n- AI-S07-DELIVER\n\nINSTRUCTOR NOTES\nCustomer question: “How does Talent Genie help someone in my role, and what happens next?”\n\nCover approved capabilities, relevant outcomes, limitations, data and implementation needs, human oversight, and next steps. Provide examples for a recruiter, operations leader, and executive.\n\nReusable aid: Three adaptable talk tracks and an objection-response guide. Use customer problem → supported capability → relevant outcome → limitation or review need → next step.\n\nLive exercise: Adapt the three templates and use one in the final role-play. Keep each explanation under 90 seconds.\n\nSuccess check: Fits the audience, uses verified facts, avoids guarantees, and ends with a concrete action.\n\nDependency: The source names Talent Genie but does not describe its features. Obtain the approved product brief before completing or sharing this handout. Generic AI examples cannot establish product knowledge.\n\nEach six-minute round includes 90 seconds to confirm the supplied customer problem, 90 seconds of explanation, one minute for an objection and next step, and two minutes of observer feedback. Rotate employee, customer, and observer roles so each learner practices as the employee. Preassign groups before the session. For a remainder of two, use a pair with facilitator observation; for a remainder of one, add a facilitator or coach to make a workable group. Confirm staffing before delivery rather than squeezing four learner turns into three rounds.\n\nLearners adapt three short, partly completed templates for a recruiter, operations leader, and executive, and deliver one in the role-play. Session 7 provides longer discovery practice; this final exercise checks problem confirmation, not a complete new discovery interview. This session is an applied learning check. Formal individual certification, if required, needs assessor coverage or separately scheduled assessment time; peer feedback alone does not establish readiness for customer work.\n\nDONE WHEN\nThe live activity is complete within the slot, each learner has an opportunity to practice, the exit check is collected, and any unresolved questions are recorded.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Open the designated working page|Use the relevant customer context|Run the demonstration and learner practice|Correct material misconceptions|Collect the output and exit check|Record actual timing and unresolved questions",
+    "Tags": "ai-course|instructor|delivery|session-08",
+    "Time Estimate": "45 min"
+  },
+  {
+    "Task ID": "AI-S08-REVIEW",
+    "Task Name": "07 - Review learner work and quiz follow-up",
+    "Description content": "Review Session 8's output: Three adapted audience-specific talk tracks, one performed customer role-play, and a short knowledge check. Use the handout answer key and the course feedback criteria. Review quiz results only if named tracking was approved; otherwise use anonymous questions and discussion patterns. Record attendance, missing work, common misconceptions, and targeted retries. Instructor review occurs outside the live learner slot.\n\nPREREQUISITES\n- AI-S08-DELIVER\n\nDONE WHEN\nOutputs have been reviewed; material accuracy or responsible-use errors receive corrective feedback; any retry, unanswered question, or material revision has an owner and next action.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Review the learner output against the criteria|Resolve or assign safety-critical corrections|Record missing work and targeted retries|Record improvements for the next delivery",
+    "Tags": "ai-course|instructor|learner-review|session-08",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-CLOSE",
+    "Task Name": "09 - Close the course and prepare instructor follow-up",
+    "Description content": "Consolidate learning evidence and course improvements after Session 8. Course completion is distinct from formal individual certification.\n\nDONE WHEN\nCompletion records, targeted coaching actions, final reference versions, and instructor improvements are recorded.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "AI-CLOSE-RESULTS|AI-CLOSE-COACHING|AI-CLOSE-REFERENCES|AI-CLOSE-IMPROVE",
+    "Checklist": "",
+    "Tags": "ai-course|instructor|course-follow-up",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-CLOSE-RESULTS",
+    "Task Name": "01 - Consolidate participation and assessment results",
+    "Description content": "Combine session outputs, the prompt and pilot checkpoints, final role-play feedback, and four-question knowledge-check results. Use the agreed completion criteria and distinguish peer observations from formal assessor decisions.\n\nPREREQUISITES\n- AI-S01-REVIEW\n- AI-S02-REVIEW\n- AI-S03-REVIEW\n- AI-S04-REVIEW\n- AI-S05-REVIEW\n- AI-S06-REVIEW\n- AI-S07-REVIEW\n- AI-S08-REVIEW\n\nDONE WHEN\nEach learner has a supported completion record or an explicit outstanding action.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Check all session records|Record the agreed completion result|Identify unresolved accuracy or responsible-use issues",
+    "Tags": "ai-course|instructor|course-follow-up",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-CLOSE-COACHING",
+    "Task Name": "02 - Arrange targeted coaching and retries where needed",
+    "Description content": "Use the recorded gaps to plan focused feedback and reassessment. Preserve essential accuracy and responsible-use standards. Additional coaching is outside the eight standard live slots and is only needed for unresolved gaps.\n\nPREREQUISITES\n- AI-CLOSE-RESULTS\n\nDONE WHEN\nEach unresolved gap has a completed retry or an owner and follow-up action; do not claim unobserved readiness.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Identify the specific skill gap|Assign the appropriate reviewer|Record the retry result or next action",
+    "Tags": "ai-course|instructor|course-follow-up",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-CLOSE-REFERENCES",
+    "Task Name": "03 - Retain the reviewed website, documents, and quizzes",
+    "Description content": "Keep the reviewed website, ten handouts, and ten quizzes in the approved location with clear versions, source references, and content owners. Confirm that all documents remain separately shareable and the working aids are easy to find.\n\nPREREQUISITES\n- AI-S08-RELEASE\n\nDONE WHEN\nLearners and instructors have an unambiguous current website and reference set.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Check all ten final document and quiz links|Record product and policy review ownership|Remove superseded learner-facing copies from the active website",
+    "Tags": "ai-course|instructor|course-follow-up",
+    "Time Estimate": ""
+  },
+  {
+    "Task ID": "AI-CLOSE-IMPROVE",
+    "Task Name": "04 - Record delivery improvements for the next cohort",
+    "Description content": "Review timing notes, learner questions, exercise quality, and misconceptions. Propose specific changes to COURSE_PLAN.md and the affected teaching assets. Keep a 40-minute activity budget and five-minute buffer in future revisions.\n\nPREREQUISITES\n- AI-CLOSE-RESULTS\n\nDONE WHEN\nThe next instructor has a prioritized improvement list based on observed delivery.\n\nSOURCE\nCOURSE_PLAN.md. Local import IDs identify plan rows; they are not existing ClickUp task IDs.",
+    "Status": "to do",
+    "Subtask IDs": "",
+    "Checklist": "Compare actual timing with each agenda|Identify unclear examples and instructions|Record changes and responsible owners",
+    "Tags": "ai-course|instructor|course-follow-up",
+    "Time Estimate": ""
+  }
+]

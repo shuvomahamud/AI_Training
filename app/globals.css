@@ -1,0 +1,88 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: var(--font-source-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-newsreader), ui-serif, Georgia, serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --color-paper-50: #f7f3ea;
+  --color-paper-100: #efe7d6;
+  --color-ink-100: #e7dfd2;
+  --color-ink-200: #d3c7b4;
+  --color-ink-500: #6f6456;
+  --color-ink-600: #534a40;
+  --color-ink-700: #3c342c;
+  --color-ink-800: #2a241e;
+  --color-ink-900: #1c1713;
+  --color-accent-500: #0f6d62;
+  --color-accent-600: #0b574e;
+  --color-accent-700: #08443d;
+}
+
+:root {
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --color-paper-50: #161310;
+    --color-paper-100: #211c18;
+    --color-ink-100: #2c2620;
+    --color-ink-200: #3e362e;
+    --color-ink-500: #b3a493;
+    --color-ink-600: #cbbcac;
+    --color-ink-700: #ddd2c4;
+    --color-ink-800: #ece4d8;
+    --color-ink-900: #f6f1e8;
+    --color-accent-500: #4db8ab;
+    --color-accent-600: #6dccc0;
+    --color-accent-700: #8fddd3;
+  }
+}
+
+html,
+body {
+  background: var(--color-paper-50);
+  color: var(--color-ink-900);
+}
+
+.input {
+  @apply w-full rounded-lg border border-ink-200 bg-white px-3 py-2 text-ink-900 shadow-sm outline-none;
+  @apply focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20;
+}
+
+@media (prefers-color-scheme: dark) {
+  .input {
+    @apply bg-paper-100;
+  }
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold transition disabled:opacity-60;
+}
+
+.btn.primary {
+  @apply bg-accent-600 text-white hover:bg-accent-700;
+}
+
+.btn.secondary {
+  @apply border border-ink-200 bg-white text-ink-800 hover:bg-paper-100;
+}
+
+.btn.danger {
+  @apply bg-red-700 text-white hover:bg-red-800;
+}
+
+.btn.ghost {
+  @apply text-ink-700 hover:bg-ink-100;
+}
+
+.nav-link {
+  @apply text-ink-700 hover:text-ink-900;
+}
+
+.prose-doc {
+  @apply prose prose-slate max-w-none dark:prose-invert;
+}
