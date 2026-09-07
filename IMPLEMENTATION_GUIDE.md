@@ -2,7 +2,10 @@
 
 Build spec for an internal training portal. Hand this to the implementing agent and follow it in order.
 
-Companion documents: `COURSE_PLAN.md` is the course-design source (eight live sessions, ten topic documents, one quiz per topic). This file specifies only the software.
+Companion document: `COURSE_PLAN.md` is the course-design source. Note that it still
+describes an **eight-session** structure; the course being built here is **six sessions
+covering ten topics** (§1). Where the two disagree, this file wins for software
+structure. `COURSE_PLAN.md` needs updating separately.
 
 ---
 
@@ -10,9 +13,30 @@ Companion documents: `COURSE_PLAN.md` is the course-design source (eight live se
 
 An admin uploads course material. Learners sign up, an admin approves them, and approved learners read the documents, join the live sessions, watch recordings, and take quizzes. Quiz results are stored for admin review.
 
-**Admin can:** create courses → create sessions inside a course → upload documents to a session → add a quiz (JSON) to a session → add live and recording links → approve or reject enrollment requests → review quiz results.
+**Admin can:** create a course → create ten topics inside it → upload documents to a topic → add a quiz (JSON) to a topic → set the course live link and add recording links → approve or reject enrollment requests → review quiz results.
 
-**Learner can:** sign up → request access to a course → once approved, read documents in the browser, download originals, open live/recording links, take quizzes repeatedly, and see their own attempt history.
+**Learner can:** sign up → request access to a course → once approved, read documents in the browser, download originals, open live and recording links, take quizzes repeatedly, and see their own attempt history.
+
+### Topics are the structure. Sessions are not.
+
+**A topic is the only content unit.** It has its own document and its own quiz, and it is what an admin uploads to. There are ten, ordered 1–10.
+
+**There is no session entity.** Live sessions happen on Google Meet and are not modelled. A course has one standing live link, and one flat list of recording links displayed on a single page. A recording is a label and a URL — nothing more. It owns no documents, no quizzes, and no topics.
+
+So the whole content model is: **course → ten topics → documents + one quiz per topic**, plus a course-level live link and a course-level list of recordings.
+
+Do not build session pages, session records, or any topic-to-session relationship. The six live sessions each cover one or two topics, but that grouping is delivery information for the facilitator and belongs in a recording's label, not in the schema:
+
+| Recording label | Covers |
+|---|---|
+| Session 1 — What AI is + Types of AI | Topics 01, 02 |
+| Session 2 — How language models work + Prompting | Topics 03, 04 |
+| Session 3 — Accuracy, hallucinations, verification | Topic 06 |
+| Session 4 — Data protection and responsible use | Topic 07 |
+| Session 5 — Business use cases + Workflow opportunities | Topics 05, 08 |
+| Session 6 — Customer discovery + Explaining Talent Genie | Topics 09, 10 |
+
+The schema supports many courses; only one exists at launch.
 
 ---
 
@@ -75,17 +99,19 @@ app/
   (auth)/signup/page.tsx
   (learner)/courses/page.tsx
   (learner)/courses/[slug]/page.tsx
-  (learner)/courses/[slug]/sessions/[position]/page.tsx
+  (learner)/courses/[slug]/recordings/page.tsx
+  (learner)/courses/[slug]/topics/[position]/page.tsx
   (learner)/me/page.tsx
   admin/page.tsx
   admin/courses/page.tsx
   admin/courses/[id]/page.tsx
-  admin/sessions/[id]/page.tsx
+  admin/topics/[id]/page.tsx
   admin/enrollments/page.tsx
   admin/results/[courseId]/page.tsx
   admin/users/page.tsx
   api/upload/route.ts                    # Blob client-upload token issuer
   api/documents/[id]/file/route.ts       # gated file streaming
+  api/documents/[id]/assets/[assetId]/route.ts   # gated docx image streaming
   layout.tsx
 lib/
   db/index.ts          # drizzle client
@@ -139,21 +165,18 @@ enrollments
   decided_by    uuid references users
   unique (course_id, user_id)
 
-sessions                                        -- a live class, NOT an auth session
-  id            uuid pk
-  course_id     uuid not null references courses on delete cascade
-  position      integer not null                -- 1-based ordering within the course
-  module_title  text                            -- optional grouping header, e.g. "Unit 1 — AI Foundations"
-  title         text not null
-  summary       text
-  scheduled_at  timestamptz
-  live_url      text                            -- overrides courses.live_url when set
-  created_at    timestamptz not null default now()
+topics                                          -- the only content unit: documents + one quiz
+  id          uuid pk
+  course_id   uuid not null references courses on delete cascade
+  position    integer not null                  -- 1..10, ordering within the course
+  title       text not null
+  summary     text
+  created_at  timestamptz not null default now()
   unique (course_id, position)
 
 documents
   id                uuid pk
-  session_id        uuid not null references sessions on delete cascade
+  topic_id          uuid not null references topics on delete cascade
   position          integer not null
   title             text not null
   source_type       text not null               -- 'docx' | 'md' | 'pdf'
@@ -165,9 +188,16 @@ documents
   html_content      text                        -- null for pdf
   created_at        timestamptz not null default now()
 
+document_assets                                 -- images extracted from a docx
+  id            uuid pk
+  document_id   uuid not null references documents on delete cascade
+  blob_pathname text not null                   -- private blob, never sent to the client
+  mime          text not null
+  created_at    timestamptz not null default now()
+
 quizzes
   id                 uuid pk
-  session_id         uuid not null references sessions on delete cascade
+  topic_id           uuid not null references topics on delete cascade
   position           integer not null
   title              text not null
   current_version_id uuid references quiz_versions   -- nullable to break the circular FK
@@ -195,22 +225,24 @@ quiz_attempts
   started_at             timestamptz not null
   submitted_at           timestamptz not null default now()
 
-recordings
+recordings                                      -- a flat list of links, no structure
   id           uuid pk
-  session_id   uuid not null references sessions on delete cascade
+  course_id    uuid not null references courses on delete cascade
   position     integer not null
-  label        text not null
+  label        text not null                    -- e.g. "Session 3 — Accuracy and verification"
   url          text not null
   recorded_at  timestamptz
 ```
 
 **Why attempts point at `quiz_versions`:** editing a quiz inserts a new version row and repoints `quizzes.current_version_id`. Learners are always served the current version; historical attempts stay accurate against the questions actually asked. Never mutate a `quiz_versions.json` in place.
 
-Add indexes on every foreign key used for lookup: `enrollments(user_id)`, `enrollments(course_id, status)`, `sessions(course_id, position)`, `documents(session_id)`, `quizzes(session_id)`, `quiz_attempts(user_id)`, `quiz_attempts(quiz_version_id)`.
+There is no `sessions` table and no link between recordings and topics. If a reason to relate them appears later, add it then — it is not needed to ship.
+
+Add indexes on every foreign key used for lookup: `enrollments(user_id)`, `enrollments(course_id, status)`, `topics(course_id, position)`, `recordings(course_id, position)`, `documents(topic_id)`, `document_assets(document_id)`, `quizzes(topic_id)`, `quiz_attempts(user_id)`, `quiz_attempts(quiz_version_id)`.
 
 ---
 
-## 5. Database connection — three things that will break if ignored
+## 5. Database connection — four things that will break if ignored
 
 ```ts
 // lib/db/index.ts
@@ -221,15 +253,20 @@ import * as schema from './schema';
 const client = postgres(process.env.DATABASE_URL!, {
   prepare: false,   // REQUIRED: PgBouncer transaction mode cannot hold prepared statements
   max: 1,           // PgBouncer pools; each serverless instance needs only one
-  ssl: 'verify-full',
+  ssl: {
+    ca: Buffer.from(process.env.DATABASE_CA_CERT_BASE64!, 'base64').toString('utf8'),
+    servername: process.env.DATABASE_TLS_SERVERNAME!,
+    rejectUnauthorized: true,
+  },
 });
 
 export const db = drizzle(client, { schema });
 ```
 
 1. **`prepare: false` is mandatory.** Without it queries fail intermittently and unreproducibly under transaction pooling.
-2. **Migrations use `DIRECT_DATABASE_URL`**, not the pooled URL — DDL through a transaction pooler misbehaves. Set this in `drizzle.config.ts`.
-3. **The database is unreachable from Edge runtime.** Every file touching `db` must run on the Node runtime. This rules out DB access in `middleware.ts` — see §6.
+2. **The CA must be passed as an object, not `ssl: 'verify-full'`.** The database uses a private CA (§12), which is not in the system trust store, so the string form fails to verify. Never fall back to `ssl: 'require'` or `rejectUnauthorized: false` to make a connection error go away — that silently removes MITM protection on a public port.
+3. **Migrations use `DIRECT_DATABASE_URL`**, not the pooled URL — DDL through a transaction pooler misbehaves. Configure it in `drizzle.config.ts` with the same `ssl` object; Drizzle Kit's URL-only path discards custom CA options.
+4. **The database is unreachable from Edge runtime.** Every file touching `db` must run on the Node runtime. This rules out DB access in `middleware.ts` — see §6.
 
 ---
 
@@ -267,7 +304,7 @@ Next.js 15 note: `cookies()`, `headers()`, `params`, and `searchParams` are all 
 |---|---|---|---|---|
 | Course catalog (published, title + summary) | ✅ | ✅ | ✅ | ✅ |
 | Request enrollment | ❌ | ✅ | — | — |
-| Session list, documents, quizzes, links | ❌ | ❌ | ✅ | ✅ |
+| Topic list, documents, quizzes, recordings, live link | ❌ | ❌ | ✅ | ✅ |
 | Document file stream | ❌ | ❌ | ✅ | ✅ |
 | Own attempt history | ❌ | ❌ | ✅ | ✅ |
 | Everything under `/admin` | ❌ | ❌ | ❌ | ✅ |
@@ -321,14 +358,18 @@ Without the `requireAdmin()` call, anyone on the internet can mint upload tokens
 
 ### Serving files back
 
-`GET /api/documents/[id]/file` → `requireEnrollment(course)` → fetch the private
-blob server-side with the Blob SDK → stream with the stored MIME and
-`Content-Disposition: inline`. Add `?download=1` for `attachment`.
+`GET /api/documents/[id]/file` → resolve the owning course via `document → topic →
+course` (topics belong straight to the course) → `requireEnrollment(course)` → fetch the private blob server-side with the
+Blob SDK → stream with the stored MIME and `Content-Disposition: inline`. Add
+`?download=1` for `attachment`.
 
 **The blob URL is never sent to the browser.** It stays in the database.
 
-Images extracted from a docx are also private. Converted HTML references the
-enrollment-gated `/api/documents/[id]/asset` route instead of a Blob URL.
+Images extracted from a docx are also private. Each is recorded in
+`document_assets`, and converted HTML references
+`/api/documents/[documentId]/assets/[assetId]` — enrollment-gated the same way —
+instead of a Blob URL. Resolve and authorize that route by its `document_id`, and
+reject any asset whose `document_id` does not match the route's document.
 
 ---
 
@@ -437,8 +478,9 @@ One point per question; a `multiple` question scores only on an exact set match.
 |---|---|
 | `/login`, `/signup` | Email + password |
 | `/courses` | Published courses. Each card shows enrollment state: request access / pending / open |
-| `/courses/[slug]` | Summary. If not approved: request button or pending notice. If approved: session list grouped by `module_title`, ordered by `position` |
-| `/courses/[slug]/sessions/[position]` | Session detail — documents (inline HTML or PDF iframe, plus download), live link, recordings, quizzes with attempt history |
+| `/courses/[slug]` | Summary. If not approved: request button or pending notice. If approved: the ten topics by `position`, each showing whether its quiz has been attempted, plus the live link and a link to the recordings page |
+| `/courses/[slug]/recordings` | One page. A flat list of recording links by `position`, each showing its label and date. Nothing else |
+| `/courses/[slug]/topics/[position]` | Topic detail — documents (inline HTML or PDF iframe, plus download) and the quiz with attempt history |
 | `/me` | Account details and all quiz attempts |
 
 ### Admin
@@ -447,8 +489,8 @@ One point per question; a `multiple` question scores only on an exact set match.
 |---|---|
 | `/admin` | Pending enrollment count, recent attempts, quick links |
 | `/admin/courses` | List, create, publish/unpublish |
-| `/admin/courses/[id]` | Course fields, course live URL, session list with reordering, add session |
-| `/admin/sessions/[id]` | Session fields, scheduled time, live URL, document upload, quiz editor, recording links |
+| `/admin/courses/[id]` | Course fields, course live URL, topic list with reordering and add-topic, and the recordings list edited inline (label, URL, date, reorder, delete) |
+| `/admin/topics/[id]` | Topic fields, document upload and ordering, quiz editor |
 | `/admin/enrollments` | Pending queue with approve/reject; filter by course and status |
 | `/admin/results/[courseId]` | Every attempt: learner, quiz, version, score, passed, safety-critical, timestamp. Expand a row for per-question answers. Group by learner, newest first |
 | `/admin/users` | List, change role, reset password |
@@ -498,24 +540,26 @@ Each phase should end deployable and verifiable.
 **Phase 1 — Foundation.** Next.js + Tailwind scaffold, Drizzle schema, first migration, `lib/db`, `lib/auth`, middleware, login/signup/logout, `scripts/seed-admin.ts`.
 *Done when:* the seeded admin logs in and reaches `/admin`; a learner signs up, logs in, and is denied `/admin` with a 404.
 
-**Phase 2 — Course structure.** Course and session CRUD, session reordering, publish/unpublish, learner catalog, course detail page.
-*Done when:* an admin creates a published course with three sessions and a learner sees it listed but cannot open its contents.
+**Phase 2 — Course structure.** Course and topic CRUD, topic reordering, publish/unpublish, learner catalog and course detail page.
+*Done when:* an admin creates a published course with ten ordered topics, and a learner sees the course listed but cannot open its contents.
 
 **Phase 3 — Enrollment.** Request flow, admin approval queue, `requireEnrollment` enforced on every content path.
 *Done when:* a learner requests access, sees a pending state, is approved, and content unlocks. An unapproved learner hitting a session URL directly gets a 404.
 
 **Phase 4 — Documents.** Blob client-upload, `/api/upload` with the admin guard, conversion pipeline, sanitizer, gated file route, reader page, delete.
-*Done when:* a real `.docx` uploads, converts, and reads correctly on mobile; the original downloads; a PDF renders in-page; a logged-out request to the file route 404s. Test with `10-Day_AI_Customer-Conversation_Training_Program (1).docx` in this repo.
+*Done when:* a real `.docx` uploads to a topic, converts, and reads correctly on mobile; its embedded images render through the gated asset route; the original downloads; a PDF renders in-page; a logged-out request to the file and asset routes 404s. Test with `10-Day_AI_Customer-Conversation_Training_Program (1).docx` in this repo.
 
-**Phase 5 — Quizzes.** JSON upload and validation, versioning on edit, quiz runner with per-question feedback, attempt storage, learner history, admin results view.
+**Phase 5 — Quizzes.** JSON upload and validation on a topic, versioning on edit, quiz runner with per-question feedback, attempt storage, learner history, admin results view grouped by topic.
 *Done when:* a quiz is taken twice with different answers and both attempts appear separately; editing the quiz creates version 2 while both earlier attempts still show the version 1 questions they were answered against.
 
-**Phase 6 — Links and polish.** Course and session live URLs, recording links, scheduled times in local timezone, empty states, form errors, responsive and keyboard passes, then seed the real eight-session course from `COURSE_PLAN.md`.
+**Phase 6 — Links and polish.** Course live URL, the recordings list and its page, dates in local timezone, empty states, form errors, responsive and keyboard passes, then seed the real course: one course, ten topics, and six recording rows labelled per the table in §1.
 
 ---
 
 ## 14. Mistakes to avoid
 
+- Building a `sessions` table, session pages, or a topic-to-session relationship. Topics are the only structure; recordings are a flat list of links.
+- Attaching documents or quizzes to anything other than a topic.
 - POSTing an uploaded file to a route handler — breaks above 4.5 MB.
 - Omitting `prepare: false` — intermittent, hard-to-reproduce query failures.
 - Running migrations through PgBouncer instead of a direct connection.
