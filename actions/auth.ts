@@ -5,6 +5,10 @@ import { redirect } from "next/navigation";
 import { z } from "zod";
 import { hashPassword, verifyPassword } from "@/lib/auth/password";
 import {
+  clearRateLimit,
+  consumeRateLimit,
+} from "@/lib/auth/rate-limit";
+import {
   clearSessionCookie,
   setSessionCookie,
 } from "@/lib/auth/session";
@@ -44,6 +48,9 @@ export async function signupAction(
   }
 
   const email = normalizeEmail(parsed.data.email);
+  if (!consumeRateLimit(`signup:${email}`, 5, 60 * 60 * 1000)) {
+    return { error: "Too many attempts. Please try again later." };
+  }
   const existing = await db.query.users.findFirst({
     where: eq(users.email, email),
   });
@@ -86,12 +93,17 @@ export async function loginAction(
   }
 
   const email = normalizeEmail(parsed.data.email);
+  const rateLimitKey = `login:${email}`;
+  if (!consumeRateLimit(rateLimitKey, 10, 15 * 60 * 1000)) {
+    return { error: "Too many attempts. Please try again later." };
+  }
   const user = await db.query.users.findFirst({
     where: eq(users.email, email),
   });
   if (!user || !(await verifyPassword(parsed.data.password, user.passwordHash))) {
     return { error: "Email or password is incorrect." };
   }
+  clearRateLimit(rateLimitKey);
 
   await setSessionCookie({
     id: user.id,

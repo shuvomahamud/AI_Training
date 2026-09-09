@@ -69,7 +69,7 @@ export default async function MePage() {
                     className="underline-offset-2 hover:underline"
                     href={`/courses/${course.slug}/sessions/${session.position}`}
                   >
-                    Session {session.position}
+                    Section {session.position}
                   </Link>
                 </p>
                 <p className="mt-1 text-ink-600">

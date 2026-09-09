@@ -36,7 +36,7 @@ export default async function AdminHomePage() {
         </Link>
         <Link href="/admin/courses" className="rounded-2xl border border-border bg-surface p-5">
           <p className="text-sm text-ink-500">Courses</p>
-          <p className="mt-2 text-sm text-ink-700">Create, publish, and add sessions</p>
+          <p className="mt-2 text-sm text-ink-700">Create, publish, and add sections</p>
         </Link>
         <Link href="/admin/users" className="rounded-2xl border border-border bg-surface p-5">
           <p className="text-sm text-ink-500">Users</p>

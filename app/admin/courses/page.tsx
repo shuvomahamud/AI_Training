@@ -18,7 +18,9 @@ export default async function AdminCoursesPage() {
       <div>
         <h1 className="font-serif text-3xl">Courses</h1>
         <p className="mt-1 text-sm text-ink-600">
-          Drafts stay hidden from learners until you publish them.
+          Drafts stay hidden from learners until you publish them. Open a course
+          to add sections, then add reading, a recording, and a quiz to each
+          section.
         </p>
       </div>
       <CreateCourseForm />
@@ -33,7 +35,7 @@ export default async function AdminCoursesPage() {
                 {course.title}
               </Link>
               <p className="text-sm text-ink-500">
-                {course.status} · {course.sessions.length} sessions · /{course.slug}
+                {course.status} · {course.sessions.length} sections · /{course.slug}
               </p>
             </div>
             <form action={setCourseStatusAction}>

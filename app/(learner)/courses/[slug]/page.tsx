@@ -83,8 +83,8 @@ export default async function CourseDetailPage({
       {approved ? (
         <div className="mt-10 grid gap-8">
           {course.sessions.length === 0 ? (
-            <EmptyState title="No sessions yet">
-              An admin will add live sessions to this course.
+            <EmptyState title="No sections yet">
+              An admin will add sections to this course.
             </EmptyState>
           ) : (
             groups.map((group, index) => (
@@ -102,7 +102,7 @@ export default async function CourseDetailPage({
                         className="block rounded-xl border border-border bg-surface p-4 hover:border-accent-500"
                       >
                         <p className="text-xs font-semibold uppercase tracking-wide text-ink-500">
-                          Session {session.position}
+                          Section {session.position}
                         </p>
                         <h3 className="mt-1 font-medium">{session.title}</h3>
                         {session.summary ? (

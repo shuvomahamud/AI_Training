@@ -2,6 +2,7 @@ import path from "node:path";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "standalone",
   poweredByHeader: false,
   serverExternalPackages: ["postgres", "mammoth"],
   outputFileTracingRoot: path.join(__dirname),

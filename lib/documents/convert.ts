@@ -1,6 +1,6 @@
-import { put } from "@vercel/blob";
 import mammoth from "mammoth";
 import MarkdownIt from "markdown-it";
+import { putPrivateObject } from "@/lib/storage";
 import { sanitizeDocumentHtml } from "./sanitize";
 
 const markdown = new MarkdownIt({
@@ -10,6 +10,12 @@ const markdown = new MarkdownIt({
 });
 
 const REJECTED_EXTENSIONS = new Set([".doc", ".odt", ".rtf", ".pages"]);
+const IMAGE_EXTENSIONS: Record<string, string> = {
+  "image/gif": ".gif",
+  "image/jpeg": ".jpg",
+  "image/png": ".png",
+  "image/webp": ".webp",
+};
 
 export type SourceType = "docx" | "md" | "pdf";
 
@@ -57,11 +63,13 @@ export async function convertDocument(options: {
     {
       convertImage: mammoth.images.imgElement(async (image) => {
         const contentType = image.contentType || "image/png";
+        const extension = IMAGE_EXTENSIONS[contentType];
+        if (!extension) return { src: "" };
         const imageBytes = await image.read();
-        const uploaded = await put(
-          `documents/${options.documentId}/${crypto.randomUUID()}`,
+        const uploaded = await putPrivateObject(
+          `documents/${options.documentId}/${crypto.randomUUID()}${extension}`,
           imageBytes,
-          { access: "private", contentType },
+          contentType,
         );
         return {
           src: `/api/documents/${options.documentId}/asset?pathname=${encodeURIComponent(uploaded.pathname)}`,

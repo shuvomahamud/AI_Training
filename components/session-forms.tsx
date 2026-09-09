@@ -24,10 +24,10 @@ export function CreateSessionForm({ courseId }: { courseId: string }) {
         placeholder="Unit 1 — AI Foundations"
       />
       <TextArea label="Summary" name="summary" />
-      <Field label="Session live URL" name="liveUrl" type="url" />
+      <Field label="Live session URL" name="liveUrl" type="url" />
       <DateTimeField name="scheduledAt" label="Scheduled at" />
       <FormError message={state && "error" in state ? state.error : undefined} />
-      <SubmitButton>Add session</SubmitButton>
+      <SubmitButton>Add section</SubmitButton>
     </form>
   );
 }
@@ -57,11 +57,11 @@ export function EditSessionForm({
       <Field label="Title" name="title" required defaultValue={title} />
       <Field label="Module title" name="moduleTitle" defaultValue={moduleTitle} />
       <TextArea label="Summary" name="summary" defaultValue={summary} />
-      <Field label="Session live URL" name="liveUrl" type="url" defaultValue={liveUrl} />
+      <Field label="Live session URL" name="liveUrl" type="url" defaultValue={liveUrl} />
       <DateTimeField name="scheduledAt" label="Scheduled at" defaultIso={scheduledAt} />
       <FormError message={state && "error" in state ? state.error : undefined} />
-      <FormOk show={state !== null && "ok" in state} message="Session saved." />
-      <SubmitButton>Save session</SubmitButton>
+      <FormOk show={state !== null && "ok" in state} message="Section saved." />
+      <SubmitButton>Save section</SubmitButton>
     </form>
   );
 }

@@ -8,7 +8,7 @@ import { db } from "@/lib/db";
 import { quizAttempts } from "@/lib/db/schema";
 import { QuizSchema } from "@/lib/quiz/schema";
 
-export const metadata = { title: "Session" };
+export const metadata = { title: "Section" };
 
 export default async function SessionPage({
   params,
@@ -65,7 +65,7 @@ export default async function SessionPage({
       <p className="text-sm text-ink-500">
         <Link href={`/courses/${course.slug}`}>{course.title}</Link>
         {" · "}
-        Session {session.position}
+        Section {session.position}
       </p>
       <h1 className="mt-2 font-serif text-4xl">{session.title}</h1>
       {session.summary ? (
@@ -86,9 +86,9 @@ export default async function SessionPage({
       ) : null}
 
       <section className="mt-10">
-        <h2 className="font-serif text-2xl">Documents</h2>
+        <h2 className="font-serif text-2xl">Reading</h2>
         {session.documents.length === 0 ? (
-          <p className="mt-3 text-sm text-ink-600">No documents in this session yet.</p>
+          <p className="mt-3 text-sm text-ink-600">No reading in this section yet.</p>
         ) : (
           <div className="mt-4 grid gap-8">
             {session.documents.map((document) => (
@@ -153,7 +153,7 @@ export default async function SessionPage({
       <section className="mt-10 grid gap-10">
         <h2 className="font-serif text-2xl">Quizzes</h2>
         {session.quizzes.length === 0 ? (
-          <p className="text-sm text-ink-600">No quizzes in this session yet.</p>
+          <p className="text-sm text-ink-600">No quizzes in this section yet.</p>
         ) : (
           session.quizzes.map((quiz) => {
             if (!quiz.currentVersion) return null;

@@ -72,13 +72,15 @@ export function TextArea({
 export function SubmitButton({
   children,
   variant = "primary",
+  disabled,
 }: {
   children: React.ReactNode;
   variant?: "primary" | "secondary" | "danger" | "ghost";
+  disabled?: boolean;
 }) {
   const { pending } = useFormStatus();
   return (
-    <button className={cn("btn", variant)} type="submit" disabled={pending}>
+    <button className={cn("btn", variant)} type="submit" disabled={pending || disabled}>
       {pending ? "Saving…" : children}
     </button>
   );

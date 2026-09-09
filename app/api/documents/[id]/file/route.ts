@@ -1,9 +1,9 @@
-import { get } from "@vercel/blob";
 import { eq } from "drizzle-orm";
 import { notFound } from "next/navigation";
 import { requireEnrollment } from "@/lib/auth/guards";
 import { db } from "@/lib/db";
 import { documents } from "@/lib/db/schema";
+import { getPrivateObject } from "@/lib/storage";
 
 export const runtime = "nodejs";
 
@@ -20,17 +20,19 @@ export async function GET(
 
   await requireEnrollment(document.session.courseId);
 
-  const upstream = await get(document.blobPathname, { access: "private" });
-  if (!upstream || upstream.statusCode !== 200) notFound();
+  const stored = await getPrivateObject(document.blobPathname, document.mime);
+  if (!stored) notFound();
 
   const download = new URL(request.url).searchParams.get("download") === "1";
   const filename = document.originalFilename.replace(/"/g, "");
 
-  return new Response(upstream.stream, {
+  return new Response(stored.body, {
     headers: {
       "Content-Type": document.mime,
       "Content-Disposition": `${download ? "attachment" : "inline"}; filename="${filename}"`,
       "Cache-Control": "private, no-store",
+      "X-Content-Type-Options": "nosniff",
+      "Content-Security-Policy": "sandbox",
     },
   });
 }

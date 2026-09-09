@@ -1,9 +1,9 @@
-import { get } from "@vercel/blob";
 import { eq } from "drizzle-orm";
 import { notFound } from "next/navigation";
 import { requireEnrollment } from "@/lib/auth/guards";
 import { db } from "@/lib/db";
 import { documents } from "@/lib/db/schema";
+import { getPrivateObject } from "@/lib/storage";
 
 export const runtime = "nodejs";
 
@@ -25,13 +25,22 @@ export async function GET(
     notFound();
   }
 
-  const asset = await get(pathname, { access: "private" });
-  if (!asset || asset.statusCode !== 200) notFound();
+  const contentType = pathname.endsWith(".png")
+    ? "image/png"
+    : pathname.endsWith(".jpg")
+      ? "image/jpeg"
+      : pathname.endsWith(".gif")
+        ? "image/gif"
+        : pathname.endsWith(".webp")
+          ? "image/webp"
+          : "application/octet-stream";
+  const asset = await getPrivateObject(pathname, contentType);
+  if (!asset) notFound();
 
-  return new Response(asset.stream, {
+  return new Response(asset.body, {
     headers: {
-      "Content-Type": asset.blob.contentType,
-      "Content-Length": String(asset.blob.size),
+      "Content-Type": asset.contentType,
+      "Content-Length": String(asset.size),
       "Cache-Control": "private, no-store",
       "X-Content-Type-Options": "nosniff",
     },

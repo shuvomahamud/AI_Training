@@ -8,6 +8,37 @@ import {
 } from "@/actions/quizzes";
 import { FormError, FormOk, SubmitButton } from "./ui";
 
+const STARTER_QUIZ = `{
+  "title": "Section quiz",
+  "passingScore": 2,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "prompt": "Replace this with a real question.",
+      "options": [
+        { "id": "a", "text": "The correct answer" },
+        { "id": "b", "text": "An incorrect answer" }
+      ],
+      "correct": ["a"],
+      "explanation": "Say why this is right.",
+      "safetyCritical": false
+    },
+    {
+      "id": "q2",
+      "type": "truefalse",
+      "prompt": "Replace this with a true/false statement.",
+      "options": [
+        { "id": "true", "text": "True" },
+        { "id": "false", "text": "False" }
+      ],
+      "correct": ["true"],
+      "explanation": "Say why this is true or false.",
+      "safetyCritical": false
+    }
+  ]
+}`;
+
 function QuizJsonForm({
   action,
   hidden,
@@ -71,6 +102,7 @@ export function CreateQuizForm({ sessionId }: { sessionId: string }) {
     <QuizJsonForm
       action={createQuizAction}
       hidden={{ sessionId }}
+      initialJson={STARTER_QUIZ}
       submitLabel="Add quiz"
     />
   );
