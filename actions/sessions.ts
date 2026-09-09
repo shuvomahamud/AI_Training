@@ -170,8 +170,6 @@ export async function deleteSessionAction(formData: FormData): Promise<void> {
 
   await db.delete(sessions).where(eq(sessions.id, parsed.id));
   revalidatePath(`/admin/courses/${session.courseId}`);
-  revalidatePath("/admin/recordings");
   revalidatePath(`/courses/${session.course.slug}`);
-  revalidatePath(`/courses/${session.course.slug}/recordings`);
   redirect(`/admin/courses/${session.courseId}`);
 }

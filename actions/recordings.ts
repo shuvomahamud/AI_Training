@@ -5,9 +5,16 @@ import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import { requireAdmin } from "@/lib/auth/guards";
 import { db } from "@/lib/db";
-import { recordings, sessions } from "@/lib/db/schema";
+import { courses, recordings } from "@/lib/db/schema";
 
 export type ActionState = { error: string } | { ok: true } | null;
+
+function revalidateRecordingPaths(slug: string, courseId: string) {
+  revalidatePath("/admin/recordings");
+  revalidatePath(`/admin/courses/${courseId}`);
+  revalidatePath(`/courses/${slug}`);
+  revalidatePath(`/courses/${slug}/recordings`);
+}
 
 export async function addRecordingAction(
   _prev: ActionState,
@@ -16,13 +23,13 @@ export async function addRecordingAction(
   await requireAdmin();
   const parsed = z
     .object({
-      sessionId: z.string().uuid(),
+      courseId: z.string().uuid(),
       label: z.string().min(1),
       url: z.string().url(),
       recordedAt: z.string().optional(),
     })
     .safeParse({
-      sessionId: formData.get("sessionId"),
+      courseId: formData.get("courseId"),
       label: formData.get("label"),
       url: formData.get("url"),
       recordedAt: formData.get("recordedAt") || undefined,
@@ -31,29 +38,25 @@ export async function addRecordingAction(
     return { error: parsed.error.issues[0]?.message ?? "Invalid input" };
   }
 
-  const session = await db.query.sessions.findFirst({
-    where: eq(sessions.id, parsed.data.sessionId),
-    with: { course: true },
+  const course = await db.query.courses.findFirst({
+    where: eq(courses.id, parsed.data.courseId),
   });
-  if (!session) return { error: "Section not found." };
+  if (!course) return { error: "Course not found." };
 
   const [row] = await db
     .select({ max: sql<number>`coalesce(max(${recordings.position}), 0)` })
     .from(recordings)
-    .where(eq(recordings.sessionId, session.id));
+    .where(eq(recordings.courseId, course.id));
 
   await db.insert(recordings).values({
-    sessionId: session.id,
+    courseId: course.id,
     position: Number(row?.max ?? 0) + 1,
     label: parsed.data.label.trim(),
     url: parsed.data.url,
     recordedAt: parsed.data.recordedAt ? new Date(parsed.data.recordedAt) : null,
   });
 
-  revalidatePath(`/admin/sessions/${session.id}`);
-  revalidatePath("/admin/recordings");
-  revalidatePath(`/courses/${session.course.slug}/recordings`);
-  revalidatePath(`/courses/${session.course.slug}/sessions/${session.position}`);
+  revalidateRecordingPaths(course.slug, course.id);
   return { ok: true };
 }
 
@@ -64,14 +67,9 @@ export async function deleteRecordingAction(formData: FormData): Promise<void> {
   });
   const recording = await db.query.recordings.findFirst({
     where: eq(recordings.id, parsed.id),
-    with: { session: { with: { course: true } } },
+    with: { course: true },
   });
   if (!recording) return;
   await db.delete(recordings).where(eq(recordings.id, parsed.id));
-  revalidatePath(`/admin/sessions/${recording.sessionId}`);
-  revalidatePath("/admin/recordings");
-  revalidatePath(`/courses/${recording.session.course.slug}/recordings`);
-  revalidatePath(
-    `/courses/${recording.session.course.slug}/sessions/${recording.session.position}`,
-  );
+  revalidateRecordingPaths(recording.course.slug, recording.courseId);
 }

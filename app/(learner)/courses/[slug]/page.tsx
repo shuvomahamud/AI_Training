@@ -87,7 +87,7 @@ export default async function CourseDetailPage({
               className="btn secondary"
               href={`/courses/${course.slug}/recordings`}
             >
-              All session recordings
+              Recordings
             </Link>
           </p>
           {course.sessions.length === 0 ? (

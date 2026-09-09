@@ -2,12 +2,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { deleteDocumentAction } from "@/actions/documents";
 import { deleteQuizAction } from "@/actions/quizzes";
-import { deleteRecordingAction } from "@/actions/recordings";
 import { deleteSessionAction } from "@/actions/sessions";
 import { ConfirmSubmitButton } from "@/components/confirm-button";
 import { DocumentUpload } from "@/components/document-upload";
 import { CreateQuizForm, EditQuizForm } from "@/components/quiz-editor";
-import { AddRecordingForm } from "@/components/recording-form";
 import { EditSessionForm } from "@/components/session-forms";
 import { requireAdmin } from "@/lib/auth/guards";
 import { db } from "@/lib/db";
@@ -27,7 +25,6 @@ export default async function AdminSessionPage({
     with: {
       course: true,
       documents: { orderBy: (table, { asc }) => [asc(table.position)] },
-      recordings: { orderBy: (table, { asc }) => [asc(table.position)] },
       quizzes: {
         orderBy: (table, { asc }) => [asc(table.position)],
         with: { currentVersion: true, versions: true },
@@ -46,13 +43,16 @@ export default async function AdminSessionPage({
           Section {session.position}: {session.title}
         </h1>
         <p className="mt-2 text-sm text-ink-600">
-          Add the three learner pieces for this section: reading, a recording
-          link, and a quiz.
+          Add reading and a quiz for this section. Recording links live on the{" "}
+          <Link className="underline" href={`/admin/courses/${session.courseId}`}>
+            course
+          </Link>
+          , not on a section.
         </p>
         <form action={deleteSessionAction} className="mt-4">
           <input type="hidden" name="id" value={session.id} />
           <ConfirmSubmitButton
-            confirm={`Delete section ${session.position} "${session.title}"? Its reading, recording links, quizzes, and learner attempts are deleted too. This cannot be undone.`}
+            confirm={`Delete section ${session.position} "${session.title}"? Its reading, quizzes, and learner attempts are deleted too. This cannot be undone.`}
           >
             Delete this section
           </ConfirmSubmitButton>
@@ -102,41 +102,8 @@ export default async function AdminSessionPage({
         <DocumentUpload sessionId={session.id} />
       </section>
 
-      <section id="recordings" className="grid scroll-mt-6 gap-4">
-        <h2 className="font-serif text-2xl">2. Recording</h2>
-        <p className="text-sm text-ink-600">
-          Paste the recorded live-session URL (Google Drive, Meet recording, or
-          similar). Learners get a link on this section.
-        </p>
-        {session.recordings.length === 0 ? (
-          <p className="rounded-lg border border-warn-border bg-warn-surface px-4 py-3 text-sm text-warn">
-            No recording link yet.
-          </p>
-        ) : (
-          <ul className="grid gap-2">
-            {session.recordings.map((recording) => (
-              <li
-                key={recording.id}
-                className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-border bg-surface px-4 py-3 text-sm"
-              >
-                <a className="underline" href={recording.url} target="_blank" rel="noreferrer">
-                  {recording.label}
-                </a>
-                <form action={deleteRecordingAction}>
-                  <input type="hidden" name="id" value={recording.id} />
-                  <button className="btn danger" type="submit">
-                    Delete
-                  </button>
-                </form>
-              </li>
-            ))}
-          </ul>
-        )}
-        <AddRecordingForm sessionId={session.id} />
-      </section>
-
       <section id="quiz" className="grid scroll-mt-6 gap-6">
-        <h2 className="font-serif text-2xl">3. Quiz</h2>
+        <h2 className="font-serif text-2xl">2. Quiz</h2>
         <p className="text-sm text-ink-600">
           One quiz per section. Learners take it on the same page as the
           reading. Start from the template, or paste JSON.

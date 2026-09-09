@@ -19,8 +19,7 @@ export default async function AdminCoursesPage() {
         <h1 className="font-serif text-3xl">Courses</h1>
         <p className="mt-1 text-sm text-ink-600">
           Drafts stay hidden from learners until you publish them. Open a course
-          to add sections, then add reading, a recording, and a quiz to each
-          section.
+          to add sections (reading and a quiz) and course-level recording links.
         </p>
       </div>
       <CreateCourseForm />

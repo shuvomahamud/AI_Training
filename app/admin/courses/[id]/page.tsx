@@ -5,6 +5,8 @@ import {
   moveSessionAction,
 } from "@/actions/sessions";
 import { EditCourseForm } from "@/components/course-forms";
+import { RecordingAdminList } from "@/components/recording-admin-list";
+import { AddRecordingForm } from "@/components/recording-form";
 import { CreateSessionForm } from "@/components/session-forms";
 import { EmptyState } from "@/components/ui";
 import { requireAdmin } from "@/lib/auth/guards";
@@ -26,11 +28,11 @@ export default async function AdminCoursePage({
   const course = await db.query.courses.findFirst({
     where: (table, { eq }) => eq(table.id, id),
     with: {
+      recordings: { orderBy: (table, { asc }) => [asc(table.position)] },
       sessions: {
         orderBy: (table, { asc }) => [asc(table.position)],
         with: {
           documents: true,
-          recordings: true,
           quizzes: true,
         },
       },
@@ -46,9 +48,8 @@ export default async function AdminCoursePage({
         </p>
         <h1 className="font-serif text-3xl">{course.title}</h1>
         <p className="mt-1 text-sm text-ink-600">
-          Each section has three things to add: reading, a recording link, and a
-          quiz. Click a section to upload them. Learners see the same three on
-          the section page.
+          Each section has reading and a quiz. Recording links belong to the
+          course, not to a section.
         </p>
         <p className="mt-1 text-sm">
           <Link className="underline" href={`/courses/${course.slug}`}>
@@ -57,6 +58,10 @@ export default async function AdminCoursePage({
           {" · "}
           <Link className="underline" href={`/admin/results/${course.id}`}>
             Quiz results
+          </Link>
+          {" · "}
+          <Link className="underline" href="/admin/recordings">
+            All recordings
           </Link>
         </p>
       </div>
@@ -70,21 +75,29 @@ export default async function AdminCoursePage({
       />
 
       <section className="grid gap-4">
+        <h2 className="font-serif text-2xl">Recordings</h2>
+        <p className="text-sm text-ink-600">
+          A flat list of links for this course. Learners see them on the
+          recordings page, not inside a section.
+        </p>
+        <RecordingAdminList recordings={course.recordings} />
+        <AddRecordingForm courseId={course.id} />
+      </section>
+
+      <section className="grid gap-4">
         <h2 className="font-serif text-2xl">Sections</h2>
         <p className="text-sm text-ink-600">
-          Open a section to add its reading, recording link, and quiz. Learners
-          then read and take the quiz on that section page.
+          Open a section to add its reading and quiz. Learners then read and
+          take the quiz on that section page.
         </p>
         {course.sessions.length === 0 ? (
           <EmptyState title="No sections yet">
-            Add a section below. Then open it to add reading, a recording, and a
-            quiz.
+            Add a section below. Then open it to add reading and a quiz.
           </EmptyState>
         ) : (
           <ol className="grid gap-3">
             {course.sessions.map((session, index) => {
               const readingCount = session.documents.length;
-              const recordingCount = session.recordings.length;
               const quizCount = session.quizzes.length;
               return (
                 <li
@@ -125,7 +138,7 @@ export default async function AdminCoursePage({
                       </form>
                     </div>
                   </div>
-                  <ul className="mt-4 grid gap-2 text-sm sm:grid-cols-3">
+                  <ul className="mt-4 grid gap-2 text-sm sm:grid-cols-2">
                     <li>
                       <Link
                         className="block rounded-lg border border-border px-3 py-2 hover:border-accent-500"
@@ -142,22 +155,9 @@ export default async function AdminCoursePage({
                     <li>
                       <Link
                         className="block rounded-lg border border-border px-3 py-2 hover:border-accent-500"
-                        href={`/admin/sessions/${session.id}#recordings`}
-                      >
-                        <span className="font-medium">2. Recording</span>
-                        <span className="mt-0.5 block text-ink-600">
-                          {recordingCount === 0
-                            ? "Not added yet"
-                            : countLabel(recordingCount, "link", "links")}
-                        </span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className="block rounded-lg border border-border px-3 py-2 hover:border-accent-500"
                         href={`/admin/sessions/${session.id}#quiz`}
                       >
-                        <span className="font-medium">3. Quiz</span>
+                        <span className="font-medium">2. Quiz</span>
                         <span className="mt-0.5 block text-ink-600">
                           {quizCount === 0
                             ? "Not added yet"

@@ -15,6 +15,13 @@
       "when": 1788739796961,
       "tag": "0001_light_violations",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1788973722829,
+      "tag": "0002_recordings_to_course",
+      "breakpoints": true
     }
   ]
 }

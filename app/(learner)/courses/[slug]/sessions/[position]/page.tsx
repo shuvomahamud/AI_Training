@@ -31,7 +31,6 @@ export default async function SessionPage({
       and(eq(table.courseId, course.id), eq(table.position, positionNumber)),
     with: {
       documents: { orderBy: (table, { asc }) => [asc(table.position)] },
-      recordings: { orderBy: (table, { asc }) => [asc(table.position)] },
       quizzes: {
         orderBy: (table, { asc }) => [asc(table.position)],
         with: { currentVersion: true },
@@ -120,33 +119,6 @@ export default async function SessionPage({
               </article>
             ))}
           </div>
-        )}
-      </section>
-
-      <section className="mt-10">
-        <h2 className="font-serif text-2xl">Recordings</h2>
-        {session.recordings.length === 0 ? (
-          <p className="mt-3 text-sm text-ink-600">No recordings posted yet.</p>
-        ) : (
-          <ul className="mt-3 grid gap-2">
-            {session.recordings.map((recording) => (
-              <li key={recording.id}>
-                <a
-                  className="text-accent-700 underline-offset-2 hover:underline"
-                  href={recording.url}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {recording.label}
-                </a>
-                {recording.recordedAt ? (
-                  <span className="ml-2 text-sm text-ink-500">
-                    <LocalDate iso={recording.recordedAt.toISOString()} />
-                  </span>
-                ) : null}
-              </li>
-            ))}
-          </ul>
         )}
       </section>
 

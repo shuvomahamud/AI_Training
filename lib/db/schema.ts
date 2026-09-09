@@ -166,16 +166,20 @@ export const quizAttempts = pgTable(
   ],
 );
 
-export const recordings = pgTable("recordings", {
-  id: uuid("id").primaryKey().defaultRandom(),
-  sessionId: uuid("session_id")
-    .notNull()
-    .references(() => sessions.id, { onDelete: "cascade" }),
-  position: integer("position").notNull(),
-  label: text("label").notNull(),
-  url: text("url").notNull(),
-  recordedAt: timestamp("recorded_at", { withTimezone: true }),
-});
+export const recordings = pgTable(
+  "recordings",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    courseId: uuid("course_id")
+      .notNull()
+      .references(() => courses.id, { onDelete: "cascade" }),
+    position: integer("position").notNull(),
+    label: text("label").notNull(),
+    url: text("url").notNull(),
+    recordedAt: timestamp("recorded_at", { withTimezone: true }),
+  },
+  (t) => [index("recordings_course_id_position_idx").on(t.courseId, t.position)],
+);
 
 export const usersRelations = relations(users, ({ many }) => ({
   enrollments: many(enrollments),
@@ -185,6 +189,7 @@ export const usersRelations = relations(users, ({ many }) => ({
 export const coursesRelations = relations(courses, ({ many }) => ({
   sessions: many(sessions),
   enrollments: many(enrollments),
+  recordings: many(recordings),
 }));
 
 export const enrollmentsRelations = relations(enrollments, ({ one }) => ({
@@ -209,7 +214,6 @@ export const sessionsRelations = relations(sessions, ({ one, many }) => ({
   }),
   documents: many(documents),
   quizzes: many(quizzes),
-  recordings: many(recordings),
 }));
 
 export const documentsRelations = relations(documents, ({ one }) => ({
@@ -251,9 +255,9 @@ export const quizAttemptsRelations = relations(quizAttempts, ({ one }) => ({
 }));
 
 export const recordingsRelations = relations(recordings, ({ one }) => ({
-  session: one(sessions, {
-    fields: [recordings.sessionId],
-    references: [sessions.id],
+  course: one(courses, {
+    fields: [recordings.courseId],
+    references: [courses.id],
   }),
 }));
 
