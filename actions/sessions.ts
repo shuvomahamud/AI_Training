@@ -7,6 +7,7 @@ import { z } from "zod";
 import { requireAdmin } from "@/lib/auth/guards";
 import { db } from "@/lib/db";
 import { sessions } from "@/lib/db/schema";
+import { deletePrivatePrefix } from "@/lib/storage";
 
 export type ActionState = { error: string } | { ok: true } | null;
 
@@ -157,10 +158,20 @@ export async function deleteSessionAction(formData: FormData): Promise<void> {
   });
   const session = await db.query.sessions.findFirst({
     where: eq(sessions.id, parsed.id),
+    with: { course: true, documents: true },
   });
   if (!session) return;
 
+  // Rows cascade, but stored originals and images do not. Remove them first so
+  // deleting a section does not leave orphaned files behind.
+  for (const document of session.documents) {
+    await deletePrivatePrefix(`documents/${document.id}/`).catch(() => undefined);
+  }
+
   await db.delete(sessions).where(eq(sessions.id, parsed.id));
   revalidatePath(`/admin/courses/${session.courseId}`);
+  revalidatePath("/admin/recordings");
+  revalidatePath(`/courses/${session.course.slug}`);
+  revalidatePath(`/courses/${session.course.slug}/recordings`);
   redirect(`/admin/courses/${session.courseId}`);
 }

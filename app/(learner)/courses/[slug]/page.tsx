@@ -82,6 +82,14 @@ export default async function CourseDetailPage({
 
       {approved ? (
         <div className="mt-10 grid gap-8">
+          <p>
+            <Link
+              className="btn secondary"
+              href={`/courses/${course.slug}/recordings`}
+            >
+              All session recordings
+            </Link>
+          </p>
           {course.sessions.length === 0 ? (
             <EmptyState title="No sections yet">
               An admin will add sections to this course.

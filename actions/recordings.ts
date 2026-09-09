@@ -33,8 +33,9 @@ export async function addRecordingAction(
 
   const session = await db.query.sessions.findFirst({
     where: eq(sessions.id, parsed.data.sessionId),
+    with: { course: true },
   });
-  if (!session) return { error: "Session not found." };
+  if (!session) return { error: "Section not found." };
 
   const [row] = await db
     .select({ max: sql<number>`coalesce(max(${recordings.position}), 0)` })
@@ -50,6 +51,9 @@ export async function addRecordingAction(
   });
 
   revalidatePath(`/admin/sessions/${session.id}`);
+  revalidatePath("/admin/recordings");
+  revalidatePath(`/courses/${session.course.slug}/recordings`);
+  revalidatePath(`/courses/${session.course.slug}/sessions/${session.position}`);
   return { ok: true };
 }
 
@@ -60,8 +64,14 @@ export async function deleteRecordingAction(formData: FormData): Promise<void> {
   });
   const recording = await db.query.recordings.findFirst({
     where: eq(recordings.id, parsed.id),
+    with: { session: { with: { course: true } } },
   });
   if (!recording) return;
   await db.delete(recordings).where(eq(recordings.id, parsed.id));
   revalidatePath(`/admin/sessions/${recording.sessionId}`);
+  revalidatePath("/admin/recordings");
+  revalidatePath(`/courses/${recording.session.course.slug}/recordings`);
+  revalidatePath(
+    `/courses/${recording.session.course.slug}/sessions/${recording.session.position}`,
+  );
 }

@@ -7,43 +7,43 @@
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
   /* Ground and raised surfaces */
-  --color-paper-50: #f7f3ea;
-  --color-paper-100: #efe7d6;
+  --color-paper-50: #f8fafc;
+  --color-paper-100: #eef2f7;
   --color-surface: #ffffff;
 
   /* Borders: soft for dividers, strong for input and control edges */
-  --color-border: #c9bca6;
-  --color-border-strong: #9a8b6f;
+  --color-border: #e2e8f0;
+  --color-border-strong: #cbd5e1;
 
   /* Text, low to high emphasis */
-  --color-ink-100: #e7dfd2;
-  --color-ink-200: #d3c7b4;
-  --color-ink-500: #6f6456;
-  --color-ink-600: #534a40;
-  --color-ink-700: #3c342c;
-  --color-ink-800: #2a241e;
-  --color-ink-900: #1c1713;
+  --color-ink-100: #f1f5f9;
+  --color-ink-200: #e2e8f0;
+  --color-ink-500: #64748b;
+  --color-ink-600: #475569;
+  --color-ink-700: #334155;
+  --color-ink-800: #1e293b;
+  --color-ink-900: #0f172a;
 
   /* Accent, plus the text colour that sits on top of it */
-  --color-accent-500: #0f6d62;
-  --color-accent-600: #0b574e;
-  --color-accent-700: #08443d;
+  --color-accent-500: #6366f1;
+  --color-accent-600: #4f46e5;
+  --color-accent-700: #4338ca;
   --color-on-accent: #ffffff;
 
   /* Status */
-  --color-danger: #7f1d1d;
+  --color-danger: #b91c1c;
   --color-danger-surface: #fef2f2;
-  --color-danger-border: #e7b4b4;
-  --color-danger-solid: #991b1b;
+  --color-danger-border: #fecaca;
+  --color-danger-solid: #dc2626;
   --color-on-danger-solid: #ffffff;
 
-  --color-warn: #713f12;
-  --color-warn-surface: #fefce8;
-  --color-warn-border: #e3cf8a;
+  --color-warn: #92400e;
+  --color-warn-surface: #fffbeb;
+  --color-warn-border: #fde68a;
 
-  --color-success: #065f46;
-  --color-success-surface: #f0fdf9;
-  --color-success-border: #9fd8c8;
+  --color-success: #047857;
+  --color-success-surface: #ecfdf5;
+  --color-success-border: #a7f3d0;
 }
 
 :root {
@@ -60,40 +60,40 @@
   :root {
     color-scheme: dark;
 
-    --color-paper-50: #161310;
-    --color-paper-100: #211c18;
-    --color-surface: #211c18;
+    --color-paper-50: #0b1120;
+    --color-paper-100: #172033;
+    --color-surface: #131c2e;
 
-    --color-border: #4a4138;
-    --color-border-strong: #78695b;
+    --color-border: #273349;
+    --color-border-strong: #3b4a63;
 
-    --color-ink-100: #2c2620;
-    --color-ink-200: #3e362e;
-    --color-ink-500: #b3a493;
-    --color-ink-600: #cbbcac;
-    --color-ink-700: #ddd2c4;
-    --color-ink-800: #ece4d8;
-    --color-ink-900: #f6f1e8;
+    --color-ink-100: #1e293b;
+    --color-ink-200: #273349;
+    --color-ink-500: #94a3b8;
+    --color-ink-600: #b3c0d1;
+    --color-ink-700: #cbd5e1;
+    --color-ink-800: #e2e8f0;
+    --color-ink-900: #f8fafc;
 
     /* Accent lightens on dark, so the text on top of it must go dark */
-    --color-accent-500: #4db8ab;
-    --color-accent-600: #6dccc0;
-    --color-accent-700: #8fddd3;
-    --color-on-accent: #161310;
+    --color-accent-500: #818cf8;
+    --color-accent-600: #a5b4fc;
+    --color-accent-700: #c7d2fe;
+    --color-on-accent: #0b1120;
 
     --color-danger: #fca5a5;
-    --color-danger-surface: #2a1a17;
-    --color-danger-border: #6b3a34;
-    --color-danger-solid: #f87171;
-    --color-on-danger-solid: #2a1210;
+    --color-danger-surface: #2c1618;
+    --color-danger-border: #5b2a2e;
+    --color-danger-solid: #ef4444;
+    --color-on-danger-solid: #ffffff;
 
     --color-warn: #fcd34d;
-    --color-warn-surface: #2a2114;
-    --color-warn-border: #6b5726;
+    --color-warn-surface: #2a2113;
+    --color-warn-border: #5c4a1d;
 
-    --color-success: #6ee7d0;
-    --color-success-surface: #14241f;
-    --color-success-border: #2f5f52;
+    --color-success: #6ee7b7;
+    --color-success-surface: #0f2620;
+    --color-success-border: #2b5c4a;
   }
 }
 

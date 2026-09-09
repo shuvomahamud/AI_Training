@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { deleteDocumentAction } from "@/actions/documents";
 import { deleteQuizAction } from "@/actions/quizzes";
 import { deleteRecordingAction } from "@/actions/recordings";
+import { deleteSessionAction } from "@/actions/sessions";
+import { ConfirmSubmitButton } from "@/components/confirm-button";
 import { DocumentUpload } from "@/components/document-upload";
 import { CreateQuizForm, EditQuizForm } from "@/components/quiz-editor";
 import { AddRecordingForm } from "@/components/recording-form";
@@ -47,6 +49,14 @@ export default async function AdminSessionPage({
           Add the three learner pieces for this section: reading, a recording
           link, and a quiz.
         </p>
+        <form action={deleteSessionAction} className="mt-4">
+          <input type="hidden" name="id" value={session.id} />
+          <ConfirmSubmitButton
+            confirm={`Delete section ${session.position} "${session.title}"? Its reading, recording links, quizzes, and learner attempts are deleted too. This cannot be undone.`}
+          >
+            Delete this section
+          </ConfirmSubmitButton>
+        </form>
       </div>
 
       <EditSessionForm
